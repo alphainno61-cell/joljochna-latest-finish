@@ -527,8 +527,8 @@
                         } else if (project.image_path) {
                             imageContent = `<img src="/storage/${project.image_path}" alt="${project.title}">`;
                         } else {
-                            const icons = ['🏙️', '🏡', '🏢', '🏗️'];
-                            imageContent = icons[index % icons.length];
+                            const icons = ['<i class="fas fa-city"></i>', '<i class="fas fa-home"></i>', '<i class="fas fa-building"></i>', '<i class="fas fa-hard-hat"></i>'];
+                            imageContent = `<div style="font-size: 5rem; color: #0a4d2e;">${icons[index % icons.length]}</div>`;
                         }
                         
                         card.innerHTML = `
@@ -760,28 +760,28 @@
         sectionSubtitle: 'NEX Real Estate-এর সফল প্রকল্পগুলো দেখুন',
         projects: [
             {
-                image: '🏙️',
+                image: '<i class="fas fa-city"></i>',
                 title: 'শান্তি নিবাস',
                 desc: 'শহরের ঠিক মাঝে আপনার শান্তির ঠিকানা। সব আধুনিক সুবিধা নিয়ে, ঢাকায় এক নতুন, বিলাসবহুল জীবন শুরু করুন।',
                 btnText: 'বিস্তারিত জানুন',
                 btnLink: '#contact'
             },
             {
-                image: '🏡',
+                image: '<i class="fas fa-home"></i>',
                 title: 'সবুজ ভিটা',
                 desc: 'নদীর একদম পাশে, যেখানে আপনি পাবেন নির্মল শান্তি। প্রকৃতির কাছাকাছি একটি নির্ভেজাল ও সুন্দর জীবন।',
                 btnText: 'বিস্তারিত জানুন',
                 btnLink: '#contact'
             },
             {
-                image: '🏢',
+                image: '<i class="fas fa-building"></i>',
                 title: 'প্রত্যাশা টাওয়ার',
                 desc: 'খুলনার সেরা লোকেশনে আপনার ব্যবসার জন্য সেরা অফিস স্পেস। এখানে বিনিয়োগ মানেই উজ্জ্বল ভবিষ্যৎ!',
                 btnText: 'বিস্তারিত জানুন',
                 btnLink: '#contact'
             },
             {
-                image: '🏗️',
+                image: '<i class="fas fa-hard-hat"></i>',
                 title: 'নির্মাণ প্লাজা',
                 desc: 'ব্যস্ত শহরের কেন্দ্রে আধুনিক এবং পরিবেশ-বান্ধব বাণিজ্যিক স্থান। ব্যবসা বাড়ানোর জন্য আদর্শ বিনিয়োগ।',
                 btnText: 'বিস্তারিত জানুন',

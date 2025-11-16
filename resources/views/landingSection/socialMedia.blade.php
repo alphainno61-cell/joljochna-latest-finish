@@ -683,7 +683,7 @@
                         mediaHTML = `<div class="sm-image"><img src="/storage/${it.image_path}" alt="${it.title || 'Image'}" draggable="false" /></div>`;
                     } else {
                         // Fallback gradient background
-                        mediaHTML = `<div class="sm-image" style="display:flex; align-items:center; justify-content:center; font-size:4rem;">📱</div>`;
+                        mediaHTML = `<div class="sm-image" style="display:flex; align-items:center; justify-content:center; font-size:4rem;"><i class="fas fa-mobile-alt"></i></div>`;
                     }
                     
                     inner.innerHTML = `

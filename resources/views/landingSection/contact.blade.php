@@ -4,28 +4,28 @@
         <div class="contact-content">
             <div class="contact-info">
                 <div class="contact-item">
-                    <div class="contact-icon" id="contactPhoneIcon">📞</div>
+                    <div class="contact-icon" id="contactPhoneIcon"><i class="fas fa-phone"></i></div>
                     <div class="contact-details">
                         <h3 id="contactPhoneLabel">ফোন</h3>
                         <p id="contactPhoneNumbers">+880 1991 995 995<br>+880 1991 994 994<br>+880 1997 995 995<br>+880 1677 600 000</p>
                     </div>
                 </div>
                 <div class="contact-item">
-                    <div class="contact-icon" id="contactEmailIcon">📧</div>
+                    <div class="contact-icon" id="contactEmailIcon"><i class="fas fa-envelope"></i></div>
                     <div class="contact-details">
                         <h3 id="contactEmailLabel">ইমেইল</h3>
                         <p id="contactEmailAddress">hello.nexgroup@gmail.com</p>
                     </div>
                 </div>
                 <div class="contact-item">
-                    <div class="contact-icon" id="contactWebIcon">🌐</div>
+                    <div class="contact-icon" id="contactWebIcon"><i class="fas fa-globe"></i></div>
                     <div class="contact-details">
                         <h3 id="contactWebLabel">ওয়েবসাইট</h3>
                         <p id="contactWebAddress">www.joljochna.com</p>
                     </div>
                 </div>
                 <div class="contact-item">
-                    <div class="contact-icon" id="contactAddressIcon">📍</div>
+                    <div class="contact-icon" id="contactAddressIcon"><i class="fas fa-map-marker-alt"></i></div>
                     <div class="contact-details">
                         <h3 id="contactAddressLabel">ঠিকানা</h3>
                         <p id="contactAddressText">শুভনূর ৩৮৮ বাড়ি সিদ্ধার্থ এস আবাস<br>খুলনা, বাংলাদেশ</p>
