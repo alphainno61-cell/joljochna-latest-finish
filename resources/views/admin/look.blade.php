@@ -1,4 +1,3 @@
-<div id="look" class="tab-content">
 <header class="header">
     <style>
         /* ==================== MODERN HEADER STYLES ==================== */
@@ -959,4 +958,3 @@
         </div>
     </div>
 </header>
-</div>

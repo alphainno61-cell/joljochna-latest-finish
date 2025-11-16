@@ -385,34 +385,125 @@
     <!-- Our Projects Section -->
     <div id="projects-our" style="margin-top:1rem;">
         <div class="table-card">
-            <h2>আমাদের প্রজেক্টসমূহ</h2>
-            <p style="color:#6b7280; margin-bottom:20px;">প্রকল্প পেজে প্রদর্শিত প্রজেক্ট কার্ড ম্যানেজ করুন</p>
+            <h2>বুকিং তথ্য</h2>
+            <p style="color:#6b7280; margin-bottom:20px;">ওয়েবসাইট থেকে জমা দেওয়া সকল বুকিং রিকোয়েস্ট দেখুন এবং পরিচালনা করুন</p>
             
-            <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 12px 16px; margin-bottom: 20px; border-radius: 6px;">
-                <p style="margin: 0; color: #1e40af; font-size: 14px;">
-                    <strong>💡 টিপস:</strong> প্রতিটি প্রজেক্ট কার্ডে ছবি, শিরোনাম, বিবরণ এবং CTA বাটন থাকবে। কার্ডগুলি বিকল্প লেআউটে প্রদর্শিত হবে।
-                </p>
-                    </div>
-
-            <!-- Add New Project Button -->
-            <button class="project-save-btn" onclick="addNewProjectCard()" style="margin-bottom: 20px;">
-                ➕ নতুন প্রজেক্ট যুক্ত করুন
-            </button>
-
-            <!-- Projects Container -->
-            <div id="our-projects-container" style="display: grid; gap: 20px; margin-top: 20px;">
-                <!-- Project cards will be dynamically added here -->
-                </div>
-
-            <!-- Dashboard Status -->
-            <div class="dashboard-status-box">
-                <h4>📊 ড্যাশবোর্ড স্ট্যাটাস</h4>
-                <p>মোট প্রজেক্ট: <span id="our-projects-count">0</span></p>
-                <small style="display: block; margin-top: 10px; opacity: 0.9;">
-                    💡 প্রজেক্ট যোগ করার পর প্রকল্প পেজে দেখতে পাবেন। ব্রাউজার কনসোল চেক করুন ডিবাগিং এর জন্য।
-                </small>
-                </div>
+            <!-- Data Table -->
+            <div style="overflow-x: auto; border: 1px solid #e2e8f0; border-radius: 0.75rem; margin-top: 1.5rem;">
+                <table style="width: 100%; border-collapse: collapse; background: white;">
+                    <thead>
+                        <tr style="background: #f8fafc;">
+                            <th style="padding: 1rem; text-align: left; font-weight: 600; color: #475569; font-size: 0.875rem; border-bottom: 2px solid #e2e8f0;">#</th>
+                            <th style="padding: 1rem; text-align: left; font-weight: 600; color: #475569; font-size: 0.875rem; border-bottom: 2px solid #e2e8f0;">নাম</th>
+                            <th style="padding: 1rem; text-align: left; font-weight: 600; color: #475569; font-size: 0.875rem; border-bottom: 2px solid #e2e8f0;">ফোন নম্বর</th>
+                            <th style="padding: 1rem; text-align: left; font-weight: 600; color: #475569; font-size: 0.875rem; border-bottom: 2px solid #e2e8f0;">ইমেইল</th>
+                            <th style="padding: 1rem; text-align: left; font-weight: 600; color: #475569; font-size: 0.875rem; border-bottom: 2px solid #e2e8f0;">প্লট সাইজ</th>
+                            <th style="padding: 1rem; text-align: left; font-weight: 600; color: #475569; font-size: 0.875rem; border-bottom: 2px solid #e2e8f0;">বার্তা</th>
+                            <th style="padding: 1rem; text-align: left; font-weight: 600; color: #475569; font-size: 0.875rem; border-bottom: 2px solid #e2e8f0;">স্ট্যাটাস</th>
+                            <th style="padding: 1rem; text-align: left; font-weight: 600; color: #475569; font-size: 0.875rem; border-bottom: 2px solid #e2e8f0;">জমার তারিখ</th>
+                        </tr>
+                    </thead>
+                    <tbody id="projectsBookingsTableBody">
+                        <tr>
+                            <td colspan="8" style="text-align: center; padding: 3rem; color: #94a3b8;">
+                                ডেটা লোড হচ্ছে...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            
+            <script>
+                (function(){
+                    async function loadProjectsBookings() {
+                        try {
+                            const response = await fetch('/api/bookings');
+                            if (!response.ok) throw new Error('Failed to fetch');
+                            
+                            const bookings = await response.json();
+                            const tbody = document.getElementById('projectsBookingsTableBody');
+                            
+                            if (bookings.length === 0) {
+                                tbody.innerHTML = `
+                                    <tr>
+                                        <td colspan="8" style="text-align: center; padding: 3rem; color: #94a3b8;">
+                                            কোন বুকিং পাওয়া যায়নি
+                                        </td>
+                                    </tr>
+                                `;
+                                return;
+                            }
+                            
+                            tbody.innerHTML = bookings.map((booking, index) => {
+                                const statusColors = {
+                                    'pending': { bg: '#fef3c7', color: '#92400e', text: 'পেন্ডিং' },
+                                    'contacted': { bg: '#dbeafe', color: '#1e40af', text: 'যোগাযোগ করা হয়েছে' },
+                                    'completed': { bg: '#d1fae5', color: '#065f46', text: 'সম্পন্ন' }
+                                };
+                                const status = statusColors[booking.status] || statusColors.pending;
+                                
+                                const date = new Date(booking.created_at);
+                                const formattedDate = date.toLocaleDateString('bn-BD', {
+                                    year: 'numeric',
+                                    month: 'short',
+                                    day: 'numeric'
+                                });
+                                
+                                return `
+                                    <tr style="border-bottom: 1px solid #f1f5f9;">
+                                        <td style="padding: 1rem; font-size: 0.875rem; color: #334155;">${index + 1}</td>
+                                        <td style="padding: 1rem; font-size: 0.875rem; color: #334155;"><strong>${booking.name}</strong></td>
+                                        <td style="padding: 1rem; font-size: 0.875rem; color: #334155;">
+                                            <a href="tel:${booking.phone}" style="color: #3b82f6; text-decoration: none;">${booking.phone}</a>
+                                        </td>
+                                        <td style="padding: 1rem; font-size: 0.875rem; color: #334155;">
+                                            <a href="mailto:${booking.email}" style="color: #3b82f6; text-decoration: none;">${booking.email}</a>
+                                        </td>
+                                        <td style="padding: 1rem; font-size: 0.875rem; color: #334155;">${booking.plot_size || '-'}</td>
+                                        <td style="padding: 1rem; font-size: 0.875rem; color: #334155; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${booking.message || '-'}</td>
+                                        <td style="padding: 1rem; font-size: 0.875rem; color: #334155;">
+                                            <span style="display: inline-flex; align-items: center; padding: 0.375rem 0.875rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; background: ${status.bg}; color: ${status.color};">
+                                                ${status.text}
+                                            </span>
+                                        </td>
+                                        <td style="padding: 1rem; font-size: 0.875rem; color: #64748b;">${formattedDate}</td>
+                                    </tr>
+                                `;
+                            }).join('');
+                        } catch (error) {
+                            console.error('Error loading bookings:', error);
+                            document.getElementById('projectsBookingsTableBody').innerHTML = `
+                                <tr>
+                                    <td colspan="8" style="text-align: center; padding: 3rem; color: #ef4444;">
+                                        ডেটা লোড করতে ব্যর্থ হয়েছে
+                                    </td>
+                                </tr>
+                            `;
+                        }
+                    }
+                    
+                    // Load when projects-our section becomes visible
+                    const observer = new MutationObserver(function(mutations) {
+                        mutations.forEach(function(mutation) {
+                            const projectsOur = document.getElementById('projects-our');
+                            if (projectsOur && projectsOur.offsetParent !== null) {
+                                loadProjectsBookings();
+                            }
+                        });
+                    });
+                    
+                    const projectsTab = document.getElementById('projects');
+                    if (projectsTab) {
+                        observer.observe(projectsTab, { attributes: true, attributeFilter: ['class', 'style'] });
+                    }
+                    
+                    // Also load immediately if already visible
+                    if (document.getElementById('projects-our')?.offsetParent !== null) {
+                        loadProjectsBookings();
+                    }
+                })();
+            </script>
+        </div>
     </div>
 
     <!-- Other Projects Section (Placeholder) -->
