@@ -77,6 +77,7 @@ const pageTitles = {
     'contact': 'কন্ট্যাক্ট প্রিভিউ',
     'book': 'বুক',
     'look': 'লুক',
+    'test': 'টেস্ট',
     'plots': 'প্লট তালিকা',
     'customers': 'গ্রাহক তালিকা',
     'reports': 'রিপোর্ট ও বিশ্লেষণ',

@@ -33,6 +33,9 @@
 
                 @include('admin.look')
 
+                <!-- Test Tab -->
+                @include('admin.testTab')
+
                <!-- setting Tab -->
                 @include('admin.setting')
 
