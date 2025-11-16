@@ -6,7 +6,7 @@
                     <h3>হোম</h3>
                     <div class="subtitle">ড্যাশবোর্ডের হোম সেকশন</div>
                 </div>
-                <div class="stat-icon blue">🏠</div>
+                <div class="stat-icon blue"><i class="fas fa-home"></i></div>
             </div>
         </div>
     </div>
@@ -44,7 +44,7 @@
                     <div class="grid-2">
                         <div class="form-group">
                             <label>ফোন আইকন</label>
-                            <input type="text" id="contactPhoneIconInput" placeholder="📞">
+                            <input type="text" id="contactPhoneIconInput" placeholder="phone">
                         </div>
                         <div class="form-group">
                             <label>ফোন লেবেল</label>
@@ -79,7 +79,7 @@
                     <div class="grid-2">
                         <div class="form-group">
                             <label>ওয়েবসাইট আইকন</label>
-                            <input type="text" id="contactWebIconInput" placeholder="🌐">
+                            <input type="text" id="contactWebIconInput" placeholder="globe">
                         </div>
                         <div class="form-group">
                             <label>ওয়েবসাইট লেবেল</label>
@@ -97,7 +97,7 @@
                 <div class="grid-2">
                     <div class="form-group">
                         <label>ঠিকানা আইকন</label>
-                        <input type="text" id="contactAddressIconInput" placeholder="📍">
+                        <input type="text" id="contactAddressIconInput" placeholder="map-marker">
                     </div>
                     <div class="form-group">
                         <label>ঠিকানা লেবেল</label>
@@ -123,7 +123,7 @@
                 <h3 style="margin:0 0 1rem 0; font-size:1rem; color:#374151;">লাইভ প্রিভিউ</h3>
                 <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:12px;">
                     <div style="border:1px solid #e5e7eb; border-radius:8px; padding:12px; background:#fff; display:flex; gap:12px; align-items:start;">
-                        <div id="prevPhoneIcon" style="font-size:24px;">📞</div>
+                        <div id="prevPhoneIcon" style="font-size:24px;"><i class="fas fa-phone"></i></div>
                         <div>
                             <h4 id="prevPhoneLabel" style="margin:0 0 4px; font-size:14px; color:#059669;">Phone</h4>
                             <p id="prevPhoneNumbers" style="margin:0; font-size:13px; color:#6b7280; line-height:1.5;">+880 1991 995 995</p>
@@ -137,14 +137,14 @@
                         </div>
                     </div>
                     <div style="border:1px solid #e5e7eb; border-radius:8px; padding:12px; background:#fff; display:flex; gap:12px; align-items:start;">
-                        <div id="prevWebIcon" style="font-size:24px;">🌐</div>
+                        <div id="prevWebIcon" style="font-size:24px;"><i class="fas fa-globe"></i></div>
                         <div>
                             <h4 id="prevWebLabel" style="margin:0 0 4px; font-size:14px; color:#059669;">Website</h4>
                             <p id="prevWebAddress" style="margin:0; font-size:13px; color:#6b7280;">www.example.com</p>
                         </div>
                     </div>
                     <div style="border:1px solid #e5e7eb; border-radius:8px; padding:12px; background:#fff; display:flex; gap:12px; align-items:start;">
-                        <div id="prevAddressIcon" style="font-size:24px;">📍</div>
+                        <div id="prevAddressIcon" style="font-size:24px;"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
                             <h4 id="prevAddressLabel" style="margin:0 0 4px; font-size:14px; color:#059669;">Address</h4>
                             <p id="prevAddressText" style="margin:0; font-size:13px; color:#6b7280; line-height:1.5;">শুভনূর ৩৮৮ বাড়ি</p>

@@ -12,13 +12,13 @@
             <div style="display:flex; gap:32px; padding:16px; flex-wrap: wrap;">
                 <div style="flex:1; min-width:220px;">
                     <div style="display:flex; align-items:center; gap:8px; color:#fbbf24;">
-                        <span>🏠</span>
+                        <span><i class="fas fa-home"></i></span>
                         <h3 id="fpvTitle" style="margin:0; color:#e5e7eb;">জলজোছনা</h3>
                     </div>
                     <p id="fpvDesc" style="margin:8px 0 12px 0; color:#cbd5e1;">NEX Real Estate এর একটি প্রকল্প। আপনার স্বপ্নের বাড়ি নির্মাণের জন্য প্রিমিয়াম লোকেশনে সবুজ পরিবেশে গড়ে উঠেছে জলজোছনা।</p>
                     <div style="display:flex; flex-direction:column; gap:8px;">
-                        <div><strong>📞</strong> <span id="fpvPhone1">+880 1991 995 995</span>, <span id="fpvPhone2">+880 1991 994 994</span></div>
-                        <div><strong>✉️</strong> <span id="fpvEmail">hello.nexup@gmail.com</span></div>
+                        <div><strong><i class="fas fa-phone"></i></strong> <span id="fpvPhone1">+880 1991 995 995</span>, <span id="fpvPhone2">+880 1991 994 994</span></div>
+                        <div><strong><i class="fas fa-envelope"></i></strong> <span id="fpvEmail">hello.nexup@gmail.com</span></div>
                     </div>
                     <div style="display:flex; gap:8px; margin-top:8px; flex-wrap: wrap;">
                         <a id="fpvFb" href="#" style="color:#cbd5e1;">Facebook</a>

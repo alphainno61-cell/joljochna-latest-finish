@@ -3,7 +3,7 @@
                         <div class="table-header">
                             <h2>প্লট তালিকা</h2>
                             <button class="btn btn-success" onclick="addNewPlot()">
-                                ➕ নতুন প্লট যোগ করুন
+                                <i class="fas fa-plus"></i> নতুন প্লট যোগ করুন
                             </button>
                         </div>
 

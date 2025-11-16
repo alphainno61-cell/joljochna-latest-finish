@@ -7,7 +7,7 @@
                                     <div class="value" id="statTotalBookings">0</div>
                                     <div class="subtitle">সর্বমোট গ্রাহক</div>
                                 </div>
-                                <div class="stat-icon blue">👥</div>
+                                <div class="stat-icon blue"><i class="fas fa-users"></i></div>
                             </div>
                         </div>
 
@@ -18,7 +18,7 @@
                                     <div class="value" id="statActiveBookings">0</div>
                                     <div class="subtitle">চলমান লেনদেন</div>
                                 </div>
-                                <div class="stat-icon green">📈</div>
+                                <div class="stat-icon green"><i class="fas fa-chart-line"></i></div>
                             </div>
                         </div>
 
@@ -29,7 +29,7 @@
                                     <div class="value" id="statTotalRevenue">৳0L</div>
                                     <div class="subtitle">প্রাপ্ত অর্থ</div>
                                 </div>
-                                <div class="stat-icon yellow">💰</div>
+                                <div class="stat-icon yellow"><i class="fas fa-money-bill-wave"></i></div>
                             </div>
                         </div>
 

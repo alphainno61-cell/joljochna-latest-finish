@@ -75,7 +75,7 @@
         <div style="border:1px solid #e5e7eb; border-radius:0.75rem; overflow:hidden; background:#0b1727;">
             <div style="display:flex; align-items:center; gap:12px; padding:10px 14px;">
                 <img id="previewLogo" alt="Preview Logo" style="height:40px; width:auto; display:none;" />
-                <div id="previewFallbackIcon" style="color:#fbbf24;">🏠</div>
+                <div id="previewFallbackIcon" style="color:#fbbf24;"><i class="fas fa-home"></i></div>
                 <div style="flex:1"></div>
                 <nav style="display:flex; gap:16px; color:#cbd5e1; font-size:14px;">
                     <span id="previewHome">হোম</span>

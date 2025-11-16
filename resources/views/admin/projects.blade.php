@@ -6,7 +6,7 @@
                     <h3>প্রকল্প</h3>
                     <div class="subtitle">হিরো সেকশন, স্লোগান, আমাদের প্রজেক্টসমূহ</div>
                 </div>
-                <div class="stat-icon purple" style="flex-shrink: 0; margin-left: auto; font-size: 2.5rem;">📁</div>
+                <div class="stat-icon purple" style="flex-shrink: 0; margin-left: auto; font-size: 2.5rem;"><i class="fas fa-folder"></i></div>
             </div>
         </div>
     </div>
@@ -327,7 +327,7 @@
                     ✏️ কন্টেন্ট এডিট করুন
                 </button>
                 <button class="clear-content-btn" onclick="clearProjectContent('hero')" id="hero-clear-btn" style="display:none;">
-                    🗑️ সব মুছে ফেলুন
+                    <i class="fas fa-trash"></i> সব মুছে ফেলুন
                 </button>
                         </div>
                         </div>
@@ -353,7 +353,7 @@
                 <label>কোম্পানি লোগো আপলোড করুন</label>
                 <input type="file" id="projects-slogan-logo" accept="image/*" onchange="previewProjectImage('slogan-logo')" />
                 <small style="display: block; margin-top: 5px; color: #6b7280; font-size: 13px;">
-                    🏢 সর্বোচ্চ ফাইল সাইজ: 5MB | সমর্থিত ফরম্যাট: JPG, PNG, SVG, WEBP | প্রস্তাবিত সাইজ: 180x180px
+                    <i class="fas fa-building"></i> সর্বোচ্চ ফাইল সাইজ: 5MB | সমর্থিত ফরম্যাট: JPG, PNG, SVG, WEBP | প্রস্তাবিত সাইজ: 180x180px
                 </small>
                 <div id="projects-slogan-logo-preview" class="image-preview-container"></div>
                         </div>
@@ -376,7 +376,7 @@
                     ✏️ কন্টেন্ট এডিট করুন
                 </button>
                 <button class="clear-content-btn" onclick="clearProjectContent('slogan')" id="slogan-clear-btn" style="display:none;">
-                    🗑️ সব মুছে ফেলুন
+                    <i class="fas fa-trash"></i> সব মুছে ফেলুন
                 </button>
                         </div>
                             </div>
@@ -391,13 +391,13 @@
                     <p style="color: #6b7280; margin: 0;">প্রজেক্ট ম্যানেজমেন্ট - ড্যাশবোর্ড থেকে প্রজেক্ট যোগ করুন এবং ম্যানেজ করুন</p>
                 </div>
                 <button class="project-save-btn" onclick="addNewProjectCard()" style="margin: 0;">
-                    ➕ নতুন প্রজেক্ট যোগ করুন
+                    <i class="fas fa-plus"></i> নতুন প্রজেক্ট যোগ করুন
                 </button>
             </div>
             
             <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 12px 16px; margin-bottom: 20px; border-radius: 6px;">
                 <p style="margin: 0; color: #1e40af; font-size: 14px;">
-                    <strong>📊 মোট প্রজেক্ট:</strong> <span id="our-projects-count">0</span> টি
+                    <strong><i class="fas fa-chart-bar"></i> মোট প্রজেক্ট:</strong> <span id="our-projects-count">0</span> টি
                 </p>
             </div>
             
@@ -423,15 +423,15 @@
                 
                 // Set icon and color based on type
                 const types = {
-                    success: { icon: '✓', bg: '#d1fae5', color: '#065f46', title: 'সফল' },
-                    error: { icon: '✗', bg: '#fee2e2', color: '#991b1b', title: 'ত্রুটি' },
-                    warning: { icon: '!', bg: '#fef3c7', color: '#92400e', title: 'সতর্কতা' },
-                    confirm: { icon: '!', bg: '#fee2e2', color: '#b91c1c', title: 'নিশ্চিত করুন' }
+                    success: { icon: '<i class="fas fa-check"></i>', bg: '#d1fae5', color: '#065f46', title: 'সফল' },
+                    error: { icon: '<i class="fas fa-times"></i>', bg: '#fee2e2', color: '#991b1b', title: 'ত্রুটি' },
+                    warning: { icon: '<i class="fas fa-exclamation"></i>', bg: '#fef3c7', color: '#92400e', title: 'সতর্কতা' },
+                    confirm: { icon: '<i class="fas fa-exclamation"></i>', bg: '#fee2e2', color: '#b91c1c', title: 'নিশ্চিত করুন' }
                 };
                 
                 const style = types[options.type] || types.confirm;
                 
-                icon.textContent = style.icon;
+                icon.innerHTML = style.icon;
                 icon.style.background = style.bg;
                 icon.style.color = style.color;
                 title.textContent = options.title || style.title;
@@ -520,7 +520,7 @@
                 
                 if (statusTextEl) {
                     if (data && (data.title || data.content)) {
-                        statusTextEl.textContent = '✓ সংরক্ষিত';
+                        statusTextEl.innerHTML = '<i class="fas fa-check"></i> সংরক্ষিত';
                         statusTextEl.style.color = '#10b981';
                         statusTextEl.style.fontWeight = '600';
                         
@@ -587,7 +587,7 @@
                 // Show success message
                 const statusEl = document.getElementById(`projects-${section}-status`);
                 if (statusEl) {
-                    statusEl.textContent = '✓ সমস্ত কন্টেন্ট মুছে ফেলা হয়েছে';
+                    statusEl.innerHTML = '<i class="fas fa-check"></i> সমস্ত কন্টেন্ট মুছে ফেলা হয়েছে';
                     statusEl.className = 'project-status success';
                     statusEl.style.display = 'inline-block';
                     setTimeout(() => {
@@ -735,7 +735,7 @@
                     // Show success message
                     const statusEl = document.getElementById(`projects-${section}-status`);
                     if (statusEl) {
-                        statusEl.textContent = '✓ প্রিভিউ আপডেট হয়েছে - প্রকল্প পেজ চেক করুন';
+                        statusEl.innerHTML = '<i class="fas fa-check"></i> প্রিভিউ আপডেট হয়েছে - প্রকল্প পেজ চেক করুন';
                         statusEl.className = 'project-status success';
                         statusEl.style.display = 'inline-block';
                         setTimeout(() => {
@@ -792,7 +792,7 @@
                     
                     if (result.success) {
                         if (statusEl) {
-                            statusEl.textContent = '✓ সফলভাবে সংরক্ষিত হয়েছে';
+                            statusEl.innerHTML = '<i class="fas fa-check"></i> সফলভাবে সংরক্ষিত হয়েছে';
                             statusEl.className = 'project-status success';
                             setTimeout(() => {
                                 statusEl.style.display = 'none';
@@ -815,7 +815,7 @@
                 } catch (error) {
                     console.error('Error saving:', error);
                     if (statusEl) {
-                        statusEl.textContent = '✗ সংরক্ষণ ব্যর্থ হয়েছে';
+                        statusEl.innerHTML = '<i class="fas fa-times"></i> সংরক্ষণ ব্যর্থ হয়েছে';
                         statusEl.className = 'project-status error';
                     }
                 }
@@ -872,7 +872,7 @@
                     <div class="project-card-header">
                         <div class="project-card-title">প্রজেক্ট #${index + 1}</div>
                         <div class="project-card-actions">
-                            ${project.id ? `<button class="project-card-btn delete" onclick="deleteOurProject(${project.id})">🗑️ মুছুন</button>` : ''}
+                            ${project.id ? `<button class="project-card-btn delete" onclick="deleteOurProject(${project.id})"><i class="fas fa-trash"></i> মুছুন</button>` : ''}
         </div>
     </div>
 
@@ -900,7 +900,7 @@
                         <label>প্রজেক্ট ইমেজ আপলোড করুন</label>
                         ${project.image_url ? `
                             <div style="margin-top: 10px; margin-bottom: 10px; padding: 12px; background: #f0fdf4; border: 2px solid #86efac; border-radius: 8px;">
-                                <small style="color: #166534; font-weight: 600; display: block; margin-bottom: 8px;">✓ বর্তমান ইমেজ সংরক্ষিত আছে</small>
+                                <small style="color: #166534; font-weight: 600; display: block; margin-bottom: 8px;"><i class="fas fa-check"></i> বর্তমান ইমেজ সংরক্ষিত আছে</small>
                                 <small style="color: #059669; font-size: 12px; display: block; margin-bottom: 8px; word-break: break-all;">Path: ${project.image_url}</small>
                                 <img src="${project.image_url}" class="project-card-image-preview" 
                                      style="display: block !important; width: 100%; max-height: 200px; object-fit: cover; border-radius: 8px; border: 2px solid #86efac;" 
@@ -912,13 +912,13 @@
                         ` : ''}
                         <input type="file" class="project-image-input" accept="image/*" onchange="previewProjectCardImage(this)" />
                         <small style="display: block; margin-top: 5px; color: #6b7280; font-size: 13px;">
-                            📸 ${project.image_url ? 'নতুন ইমেজ আপলোড করুন (ঐচ্ছিক) - পুরাতন ইমেজ রাখা হবে' : 'সর্বোচ্চ ফাইল সাইজ: 5MB | প্রস্তাবিত সাইজ: 1500x900px'}
+                            <i class="fas fa-camera"></i> ${project.image_url ? 'নতুন ইমেজ আপলোড করুন (ঐচ্ছিক) - পুরাতন ইমেজ রাখা হবে' : 'সর্বোচ্চ ফাইল সাইজ: 5MB | প্রস্তাবিত সাইজ: 1500x900px'}
                         </small>
                         <div class="project-image-preview-container"></div>
                         </div>
 
                     <button class="project-save-btn" onclick="saveOurProject(this)" style="margin-top: 15px;">
-                        ${project.id ? '💾 আপডেট করুন' : '💾 সংরক্ষণ করুন'}
+                        ${project.id ? '<i class="fas fa-save"></i> আপডেট করুন' : '<i class="fas fa-save"></i> সংরক্ষণ করুন'}
                     </button>
                 `;
 
@@ -1099,7 +1099,7 @@
                         showCancel: false
                     });
                 } finally {
-                    button.textContent = projectId ? '💾 আপডেট করুন' : '💾 সংরক্ষণ করুন';
+                    button.innerHTML = projectId ? '<i class="fas fa-save"></i> আপডেট করুন' : '<i class="fas fa-save"></i> সংরক্ষণ করুন';
                     button.disabled = false;
                 }
             };

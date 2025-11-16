@@ -16,7 +16,7 @@
                         <div id="ctPreviewSubtitle" style="color:#cbd5e1; margin-bottom:12px;">আমরা আপনার সেবায় প্রস্তুত</div>
 
                         <div style="display:flex; gap:10px; align-items:flex-start;">
-                            <div id="ctPreviewPhoneIcon" style="font-size:1.25rem;">📞</div>
+                            <div id="ctPreviewPhoneIcon" style="font-size:1.25rem;"><i class="fas fa-phone"></i></div>
                             <div>
                                 <div id="ctPreviewPhoneLabel" style="font-weight:600;">ফোন</div>
                                 <div id="ctPreviewPhoneNumbers">+880 1991 995 995<br>+880 1991 994 994<br>+880 1997 995 995<br>+880 1677 600 000</div>
@@ -32,7 +32,7 @@
                         </div>
 
                         <div style="display:flex; gap:10px; align-items:flex-start;">
-                            <div id="ctPreviewWebIcon" style="font-size:1.25rem;">🌐</div>
+                            <div id="ctPreviewWebIcon" style="font-size:1.25rem;"><i class="fas fa-globe"></i></div>
                             <div>
                                 <div id="ctPreviewWebLabel" style="font-weight:600;">ওয়েবসাইট</div>
                                 <div id="ctPreviewWebAddress">www.joljochna.com</div>
@@ -40,7 +40,7 @@
                         </div>
 
                         <div style="display:flex; gap:10px; align-items:flex-start;">
-                            <div id="ctPreviewAddressIcon" style="font-size:1.25rem;">📍</div>
+                            <div id="ctPreviewAddressIcon" style="font-size:1.25rem;"><i class="fas fa-map-marker-alt"></i></div>
                             <div>
                                 <div id="ctPreviewAddressLabel" style="font-weight:600;">ঠিকানা</div>
                                 <div id="ctPreviewAddressText">শুভনূর ৩৮৮ বাড়ি সিদ্ধার্থ এস আবাস<br>খুলনা, বাংলাদেশ</div>
