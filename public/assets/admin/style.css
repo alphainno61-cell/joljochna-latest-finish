@@ -586,6 +586,7 @@ body {
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     min-height: calc(100vh - 80px);
     position: relative;
+    /* display: none !important; */
 }
 
 .content-area::before {

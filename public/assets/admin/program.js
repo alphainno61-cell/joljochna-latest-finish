@@ -71,6 +71,7 @@ const pageTitles = {
     'home': 'হোম',
     'about': 'আমাদের সম্পর্কে',
     'projects': 'প্রকল্প',
+    'bookings': 'বুকিং তথ্য',
     'header': 'হেডার',
     'footer': 'ফুটার',
     'footer-preview': 'ফুটার প্রিভিউ',

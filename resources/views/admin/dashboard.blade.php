@@ -16,6 +16,9 @@
                 <!-- Projects Tab -->
                 @include('admin.projects')
 
+                <!-- Bookings Tab -->
+                @include('admin.bookingsTab')
+
                 <!-- Header Tab -->
                 @include('admin.headerTab')
 
