@@ -180,6 +180,11 @@ body {
     pointer-events: none;
     width: 0;
     height: 0;
+    display: none !important;
+}
+
+.sidebar.collapsed .logout-section span {
+    display: none !important;
 }
 
 .toggle-btn {
@@ -325,6 +330,11 @@ body {
 .sidebar.collapsed .nav-item {
     justify-content: center;
     padding: 0.875rem 0;
+    gap: 0;
+}
+
+.sidebar.collapsed .nav-item svg {
+    margin: 0 auto;
 }
 
 /* Submenu */
@@ -343,7 +353,9 @@ body {
 }
 
 .sidebar.collapsed .nav-submenu {
-    margin-left: 0;
+    display: none !important;
+    max-height: 0 !important;
+    opacity: 0 !important;
 }
 
 .nav-subitem {
@@ -414,6 +426,7 @@ body {
     cursor: pointer;
     transition: all var(--transition);
     font-weight: 500;
+    justify-content: center;
 }
 
 .logout-btn:hover {

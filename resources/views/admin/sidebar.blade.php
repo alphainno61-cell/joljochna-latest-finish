@@ -96,6 +96,7 @@
                         <line x1="21" y1="12" x2="9" y2="12"></line>
                     </svg>
                     <span>লগআউট</span>
+                    
                 </button>
             </div>
 
