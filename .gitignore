@@ -1,0 +1,81 @@
+# Laravel .gitignore
+
+# Environment Files
+.env
+.env.backup
+.env.production
+.env.local
+.phpunit.result.cache
+
+# IDE & Editor Files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Dependencies
+/node_modules
+/vendor
+
+# Compiled Assets
+/public/hot
+/public/storage
+/public/build
+
+# Laravel Storage
+/storage/*.key
+/storage/app/*
+!/storage/app/public
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+
+# Testing
+/.phpunit.cache
+/phpunit.xml
+/coverage
+
+# Build Files
+/bootstrap/cache/*
+
+# Database
+*.sqlite
+*.sqlite-journal
+database/*.sqlite
+database/*.sqlite-shm
+database/*.sqlite-wal
+
+# Backups
+/backups
+*.sql.gz
+database/*backup*.sql
+!database/finaljoljochna_production.sql
+
+# Temporary Files
+*.log
+*.tmp
+*.cache
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Documentation (keep only essential ones)
+/*.md
+!/README.md
+!/DEPLOYMENT_GUIDE.md
+!/DEPLOYMENT_CHECKLIST.md
+
+# Misc
+npm-debug.log
+yarn-error.log
+auth.json
