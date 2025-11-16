@@ -1,40 +1,22 @@
+<div id="bookings" class="tab-content">
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-card-content">
+                <div class="stat-info">
+                    <h3>বুকিং ব্যবস্থাপনা</h3>
+                    <div class="subtitle">ওয়েবসাইট থেকে সংগৃহীত বুকিং রিকোয়েস্ট।</div>
+                </div>
+                <div class="stat-icon green">📋</div>
+            </div>
+        </div>
+    </div>
 
-<style>
- .right-sidebar {
-    position: fixed;
-    top: 0;
-    right: -350px;
-    width: 350px;
-    height: 100%;
-    background: #fff;
-    transition: right 0.3s;
-    z-index: 10000;
-}
+<div class="table-card">
 
-.right-sidebar.active {
-    right: 0;
-}
-
-</style>
-<!-- MAIN CONTENT STRUCTURE -->
-<!-- You might need to add a button to your main navbar to toggle this on mobile -->
-<!-- <button onclick="toggleSidebar()">Open Bookings</button> -->
-
-<!-- THE SIDEBAR -->
-<div id="bookingSidebar" class="right-sidebar">
-    <!-- Close Button (Visible on mobile or if you want to toggle it) -->
-    <button onclick="toggleSidebar()" style="float: right; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #6b7280;">&times;</button>
-    
-    <!-- Original Content Start (Modified slightly for sidebar fit) -->
-    <div class="table-card" style="box-shadow: none; border: none; padding: 0;">
-        <h2>বুকিং ব্যবস্থাপনা</h2>
-        <p style="color:#6b7280; margin-bottom:1rem; font-size: 0.9rem;">
-            ওয়েবসাইট থেকে সংগৃহীত বুকিং রিকোয়েস্ট।
-        </p>
         
-        <!-- Stats Cards (Grid adjusted for narrow width) -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 1.5rem;">
-            <div class="stat-card" style="grid-column: span 2;"> <!-- Total takes full width -->
+        <!-- Stats Cards -->
+        <div class="stats-grid" style="margin-bottom: 1.5rem;">
+            <div class="stat-card">
                 <div class="stat-card-content">
                     <div class="stat-info">
                         <h3>মোট বুকিং</h3>
@@ -46,48 +28,49 @@
             <div class="stat-card">
                 <div class="stat-card-content">
                     <div class="stat-info">
-                        <h3 style="font-size: 0.9rem;">নতুন</h3>
-                        <div class="stat-number" id="bkPendingCount" style="font-size: 1.2rem;">0</div>
+                        <h3>নতুন</h3>
+                        <div class="stat-number" id="bkPendingCount">0</div>
                     </div>
-                    <div class="stat-icon" style="background:#fef3c7; color:#92400e; padding: 0.5rem;">⏳</div>
+                    <div class="stat-icon" style="background:#fef3c7; color:#92400e;">⏳</div>
                 </div>
             </div>
             <div class="stat-card">
                 <div class="stat-card-content">
                     <div class="stat-info">
-                        <h3 style="font-size: 0.9rem;">সম্পন্ন</h3>
-                        <div class="stat-number" id="bkCompletedCount" style="font-size: 1.2rem;">0</div>
+                        <h3>সম্পন্ন</h3>
+                        <div class="stat-number" id="bkCompletedCount">0</div>
                     </div>
-                    <div class="stat-icon" style="background:#d1fae5; color:#065f46; padding: 0.5rem;">✓</div>
+                    <div class="stat-icon" style="background:#d1fae5; color:#065f46;">✓</div>
                 </div>
             </div>
         </div>
 
-        <!-- Action Buttons (Stacked for sidebar) -->
-        <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem;">
-            <div style="display: flex; gap: 0.5rem;">
-                <button onclick="exportBookingsCSV()" style="flex: 1; padding: 0.5rem; background: #0a4d2e; color: white; border: none; border-radius: 0.3rem; cursor: pointer; font-size: 0.8rem;">
-                    📥 CSV
-                </button>
-                <button onclick="refreshBookingsList()" style="flex: 1; padding: 0.5rem; background: #0d6639; color: white; border: none; border-radius: 0.3rem; cursor: pointer; font-size: 0.8rem;">
-                    🔄 রিফ্রেশ
-                </button>
-            </div>
-            <button id="bkBulkDeleteBtn" onclick="bulkDeleteBookings()" style="display:none; width: 100%; padding: 0.5rem; background: #ef4444; color: white; border: none; border-radius: 0.3rem; cursor: pointer;">
+        <!-- Action Buttons -->
+        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+            <button onclick="exportBookingsCSV()" class="btn-primary" style="padding: 0.75rem 1.5rem; background: #0a4d2e; color: white; border: none; border-radius: 0.5rem; cursor: pointer; font-weight: 600;">
+                📥 CSV এক্সপোর্ট
+            </button>
+            <button onclick="refreshBookingsList()" class="btn-secondary" style="padding: 0.75rem 1.5rem; background: #0d6639; color: white; border: none; border-radius: 0.5rem; cursor: pointer; font-weight: 600;">
+                🔄 রিফ্রেশ
+            </button>
+            <button id="bkBulkDeleteBtn" onclick="bulkDeleteBookings()" style="display:none; padding: 0.75rem 1.5rem; background: #ef4444; color: white; border: none; border-radius: 0.5rem; cursor: pointer; font-weight: 600;">
                 🗑️ মুছুন (<span id="bkSelectedCount">0</span>)
             </button>
         </div>
 
-        <!-- Bookings Table (Scrollable horizontally) -->
-        <div style="overflow-x: auto; border: 1px solid #eee; border-radius: 4px;">
-            <table class="data-table" style="width: 100%; border-collapse: collapse; font-size: 12px;">
+        <!-- Bookings Table -->
+        <div style="overflow-x: auto;">
+            <table class="data-table" style="width: 100%; border-collapse: collapse;">
                 <thead>
                     <tr style="background: #f9fafb; text-align: left;">
-                        <th style="padding: 8px;"><input type="checkbox" id="bkSelectAll" onchange="toggleSelectAll(this.checked)"></th>
-                        <th style="padding: 8px;">নাম</th>
-                        <th style="padding: 8px;">তারিখ</th>
-                        <th style="padding: 8px;">স্ট্যাটাস</th>
-                        <th style="padding: 8px;">অ্যাকশন</th>
+                        <th style="padding: 1rem;"><input type="checkbox" id="bkSelectAll" onchange="toggleSelectAll(this.checked)"></th>
+                        <th style="padding: 1rem;">নাম</th>
+                        <th style="padding: 1rem;">ফোন</th>
+                        <th style="padding: 1rem;">ইমেইল</th>
+                        <th style="padding: 1rem;">প্লট সাইজ</th>
+                        <th style="padding: 1rem;">তারিখ</th>
+                        <th style="padding: 1rem;">স্ট্যাটাস</th>
+                        <th style="padding: 1rem;">অ্যাকশন</th>
                     </tr>
                 </thead>
                 <tbody id="bkTableBody">
@@ -98,15 +81,8 @@
     </div>
 </div>
 
-<!-- JAVASCRIPT LOGIC (Preserved mostly, adapted for layout) -->
+<!-- JAVASCRIPT LOGIC -->
 <script>
-// Function to open/close sidebar
-function toggleSidebar() {
-    const sidebar = document.getElementById('bookingSidebar');
-    sidebar.classList.toggle('active');
-    // Optional: If you want the body to move
-    // document.body.classList.toggle('has-right-sidebar');
-}
 
 (function() {
     let bookings = [];
@@ -165,21 +141,20 @@ function toggleSidebar() {
                 completed: 'background:#d1fae5; color:#065f46;'
             };
 
-            // Modified Table Row for Compact Sidebar View (Removed some columns like phone/email/msg to fit)
             row.innerHTML = `
-                <td style="padding: 8px; border-bottom: 1px solid #eee;"><input type="checkbox" class="bk-cb" data-id="${bk.id}" ${selected.has(bk.id)?'checked':''} onchange="toggleSelect(${bk.id}, this.checked)"></td>
-                <td style="padding: 8px; border-bottom: 1px solid #eee;">
-                    <div style="font-weight:bold;">${bk.name}</div>
-                    <div style="font-size: 0.75rem; color: #666;">${bk.phone}</div>
-                </td>
-                <td style="padding: 8px; border-bottom: 1px solid #eee; font-size: 0.75rem;">${dateStr}</td>
-                <td style="padding: 8px; border-bottom: 1px solid #eee;">
-                    <select onchange="updateStatus(${bk.id}, this.value)" style="font-size: 0.7rem; padding: 2px; border-radius:4px; border:none; cursor:pointer; ${statusColors[bk.status]}">
+                <td style="padding: 1rem; border-bottom: 1px solid #eee;"><input type="checkbox" class="bk-cb" data-id="${bk.id}" ${selected.has(bk.id)?'checked':''} onchange="toggleSelect(${bk.id}, this.checked)"></td>
+                <td style="padding: 1rem; border-bottom: 1px solid #eee; font-weight: 600;">${bk.name}</td>
+                <td style="padding: 1rem; border-bottom: 1px solid #eee;">${bk.phone || 'N/A'}</td>
+                <td style="padding: 1rem; border-bottom: 1px solid #eee;">${bk.email || 'N/A'}</td>
+                <td style="padding: 1rem; border-bottom: 1px solid #eee;">${bk.plot_size || 'N/A'}</td>
+                <td style="padding: 1rem; border-bottom: 1px solid #eee;">${dateStr}</td>
+                <td style="padding: 1rem; border-bottom: 1px solid #eee;">
+                    <select onchange="updateStatus(${bk.id}, this.value)" style="padding: 0.5rem; border-radius: 0.5rem; border: 1px solid #e5e7eb; cursor: pointer; font-weight: 600; ${statusColors[bk.status]}">
                         ${Object.keys(statusMap).map(k => `<option value="${k}" ${bk.status===k?'selected':''}>${statusMap[k]}</option>`).join('')}
                     </select>
                 </td>
-                <td style="padding: 8px; border-bottom: 1px solid #eee; text-align:center;">
-                    <button onclick="viewBooking(${bk.id})" style="background:none; border:none; cursor:pointer;">👁️</button>
+                <td style="padding: 1rem; border-bottom: 1px solid #eee; text-align: center;">
+                    <button onclick="viewBooking(${bk.id})" style="background: #0a4d2e; color: white; border: none; padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer; font-weight: 600;">👁️ দেখুন</button>
                 </td>
             `;
         });
