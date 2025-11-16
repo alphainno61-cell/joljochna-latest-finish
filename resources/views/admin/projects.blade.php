@@ -384,29 +384,31 @@
 
     <!-- Our Projects Section -->
     <div id="projects-our" style="margin-top:1rem;">
-        <div style="padding: 2rem; text-align: center;">
-            <h2 style="color: #1f2937; font-size: 1.5rem; margin-bottom: 1rem;">আমাদের প্রজেক্টসমূহ</h2>
-            <p style="color: #6b7280;">প্রজেক্ট ম্যানেজমেন্ট সেকশন শীঘ্রই যুক্ত হবে</p>
-        </div>
-        
-        <script>
-            // Placeholder for future project management features
-            console.log('Projects Our section loaded');
-                            }
-                        });
-                    });
-                    
-                    const projectsTab = document.getElementById('projects');
-                    if (projectsTab) {
-                        observer.observe(projectsTab, { attributes: true, attributeFilter: ['class', 'style'] });
-                    }
-                    
-                    // Also load immediately if already visible
-                    if (document.getElementById('projects-our')?.offsetParent !== null) {
-                        loadProjectsBookings();
-                    }
-                })();
-            </script>
+        <div class="table-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <div>
+                    <h2>আমাদের প্রজেক্টসমূহ</h2>
+                    <p style="color:#6b7280; margin-top: 8px;">প্রজেক্ট যোগ করুন, সম্পাদনা করুন এবং মুছুন</p>
+                </div>
+                <button class="project-save-btn" onclick="addNewProjectCard()" style="background: #10b981;">
+                    ➕ নতুন প্রজেক্ট যোগ করুন
+                </button>
+            </div>
+
+            <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 12px 16px; margin-bottom: 20px; border-radius: 6px;">
+                <p style="margin: 0; color: #1e40af; font-size: 14px;">
+                    <strong>📌 নির্দেশনা:</strong> প্রতিটি প্রজেক্টের জন্য নাম, বিবরণ, ইমেজ এবং CTA বোতাম তথ্য দিন।
+                </p>
+            </div>
+
+            <div id="our-projects-count" style="margin-bottom: 15px; font-weight: 600; color: #7c3aed;">
+                মোট প্রজেক্ট: <span id="project-count-number">0</span>
+            </div>
+
+            <!-- Container for all project cards -->
+            <div id="our-projects-container" style="display: grid; gap: 20px;">
+                <!-- Project cards will be dynamically inserted here -->
+            </div>
         </div>
     </div>
 
@@ -1160,7 +1162,7 @@
 
             // Update project count
             function updateProjectCount() {
-                const countEl = document.getElementById('our-projects-count');
+                const countEl = document.getElementById('project-count-number');
                 if (countEl) {
                     countEl.textContent = ourProjects.length;
                 }
