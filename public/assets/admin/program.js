@@ -75,7 +75,8 @@ const pageTitles = {
     'footer': 'ফুটার',
     'footer-preview': 'ফুটার প্রিভিউ',
     'contact': 'কন্ট্যাক্ট প্রিভিউ',
-    'bookings': 'বুকিং',
+    'book': 'বুক',
+    'look': 'লুক',
     'plots': 'প্লট তালিকা',
     'customers': 'গ্রাহক তালিকা',
     'reports': 'রিপোর্ট ও বিশ্লেষণ',
@@ -211,20 +212,7 @@ function showTab(tabId) {
     // Update header title
     document.getElementById('pageTitle').textContent = pageTitles[tabId] || 'ড্যাশবোর্ড';
 
-    const contentArea = document.querySelector('.content-area');
-    const mainContent = document.querySelector('.main-content');
-    const dashboardContent = document.querySelector('.dashboard');
-    if (contentArea) {
-        if (tabId === 'bookings') {
-            // contentArea.style.background = 'red';
-            // mainContent.style.background = 'red';
-            // contentArea.style.display = 'none';
-            // mainContent.style.display = 'none';
-            // dashboardContent.style.display = 'none';
-        } else {
-            contentArea.style.background = 'yellow';
-        }
-    }
+    // No special handling needed for book tab
 
     // Auto-collapse submenus when switching to other tabs
     const homeSub = document.getElementById('homeSubmenu');

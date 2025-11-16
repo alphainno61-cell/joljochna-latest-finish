@@ -28,6 +28,11 @@
                 <!-- Contact Preview Tab -->
                 @include('admin.contactTab')
 
+                <!-- Book Tab -->
+                @include('admin.bookTab')
+
+                @include('admin.look')
+
                <!-- setting Tab -->
                 @include('admin.setting')
 
