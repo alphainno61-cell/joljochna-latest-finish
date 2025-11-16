@@ -946,10 +946,10 @@
         });
     </script>
     <div class="header-right">
-        <span class="user-name" aria-hidden="true">অ্যাডমিন</span>
+        {{-- <span class="user-name" aria-hidden="true"></span> --}}
         <div class="user-menu">
             <button class="user-avatar" id="userMenuBtn" aria-haspopup="true" aria-expanded="false">
-                <img src="/images/Joljochna.png" alt="User profile">
+                অ্যাডমিন
             </button>
             <div class="user-dropdown" id="userDropdown" role="menu">
                 <a href="#" role="menuitem" onclick="openProfileLogoEditor(); return false;">প্রোফাইল পরিবর্তন</a>

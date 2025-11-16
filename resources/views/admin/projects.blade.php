@@ -358,8 +358,8 @@
                 <div id="projects-slogan-logo-preview" class="image-preview-container"></div>
                         </div>
             
-            <button class="project-save-btn" onclick="saveProjectSection('slogan')">সংরক্ষণ করুন</button>
-            <button class="project-preview-btn" onclick="previewProjectSection('slogan')">প্রিভিউ দেখুন</button>
+            <button style="background: #DEDFE1; color: black;" class="project-save-btn" onclick="saveProjectSection('slogan')">সংরক্ষণ করুন</button>
+            <button style="background: #08452B; color: white;" class="project-preview-btn" onclick="previewProjectSection('slogan')">প্রিভিউ দেখুন</button>
             <div id="projects-slogan-status" class="project-status" style="display:none;"></div>
 
             <!-- Dashboard Status -->
