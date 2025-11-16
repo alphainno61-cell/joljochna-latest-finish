@@ -384,29 +384,26 @@
 
     <!-- Our Projects Section -->
     <div id="projects-our" style="margin-top:1rem;">
-        <div style="padding: 2rem; text-align: center;">
-            <h2 style="color: #1f2937; font-size: 1.5rem; margin-bottom: 1rem;">আমাদের প্রজেক্টসমূহ</h2>
-            <p style="color: #6b7280;">প্রজেক্ট ম্যানেজমেন্ট সেকশন শীঘ্রই যুক্ত হবে</p>
-        </div>
-        
-        <script>
-            // Placeholder for future project management features
-            console.log('Projects Our section loaded');
-                            }
-                        });
-                    });
-                    
-                    const projectsTab = document.getElementById('projects');
-                    if (projectsTab) {
-                        observer.observe(projectsTab, { attributes: true, attributeFilter: ['class', 'style'] });
-                    }
-                    
-                    // Also load immediately if already visible
-                    if (document.getElementById('projects-our')?.offsetParent !== null) {
-                        loadProjectsBookings();
-                    }
-                })();
-            </script>
+        <div class="table-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <div>
+                    <h2 style="color: #1f2937; font-size: 1.5rem; margin-bottom: 0.5rem;">আমাদের প্রজেক্টসমূহ</h2>
+                    <p style="color: #6b7280; margin: 0;">প্রজেক্ট ম্যানেজমেন্ট - ড্যাশবোর্ড থেকে প্রজেক্ট যোগ করুন এবং ম্যানেজ করুন</p>
+                </div>
+                <button class="project-save-btn" onclick="addNewProjectCard()" style="margin: 0;">
+                    ➕ নতুন প্রজেক্ট যোগ করুন
+                </button>
+            </div>
+            
+            <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 12px 16px; margin-bottom: 20px; border-radius: 6px;">
+                <p style="margin: 0; color: #1e40af; font-size: 14px;">
+                    <strong>📊 মোট প্রজেক্ট:</strong> <span id="our-projects-count">0</span> টি
+                </p>
+            </div>
+            
+            <div id="our-projects-container" style="display: flex; flex-direction: column; gap: 20px;">
+                <!-- Projects will be loaded dynamically here -->
+            </div>
         </div>
     </div>
 

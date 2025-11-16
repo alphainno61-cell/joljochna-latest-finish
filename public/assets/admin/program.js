@@ -211,16 +211,6 @@ function showTab(tabId) {
     // Update header title
     document.getElementById('pageTitle').textContent = pageTitles[tabId] || 'ড্যাশবোর্ড';
 
-    // Hide content-area padding for bookings, footer, and header tabs
-    const contentArea = document.querySelector('.content-area');
-    if (contentArea) {
-        if (tabId === 'bookings' || tabId === 'footer' || tabId === 'header') {
-            contentArea.style.display = 'none';
-        } else {
-            contentArea.style.display = 'inline-block';
-        }
-    }
-
     // Auto-collapse submenus when switching to other tabs
     const homeSub = document.getElementById('homeSubmenu');
     const aboutSub = document.getElementById('aboutSubmenu');
