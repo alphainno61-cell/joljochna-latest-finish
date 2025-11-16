@@ -211,6 +211,21 @@ function showTab(tabId) {
     // Update header title
     document.getElementById('pageTitle').textContent = pageTitles[tabId] || 'ড্যাশবোর্ড';
 
+    const contentArea = document.querySelector('.content-area');
+    const mainContent = document.querySelector('.main-content');
+    const dashboardContent = document.querySelector('.dashboard');
+    if (contentArea) {
+        if (tabId === 'bookings') {
+            // contentArea.style.background = 'red';
+            // mainContent.style.background = 'red';
+            // contentArea.style.display = 'none';
+            // mainContent.style.display = 'none';
+            // dashboardContent.style.display = 'none';
+        } else {
+            contentArea.style.background = 'yellow';
+        }
+    }
+
     // Auto-collapse submenus when switching to other tabs
     const homeSub = document.getElementById('homeSubmenu');
     const aboutSub = document.getElementById('aboutSubmenu');

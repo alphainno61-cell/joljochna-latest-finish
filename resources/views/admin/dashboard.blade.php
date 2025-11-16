@@ -28,9 +28,6 @@
                 <!-- Contact Preview Tab -->
                 @include('admin.contactTab')
 
-                <!-- Bookings Tab -->
-                @include('admin.bookingsTab')
-
                <!-- setting Tab -->
                 @include('admin.setting')
 
