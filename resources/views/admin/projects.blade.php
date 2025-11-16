@@ -4,7 +4,7 @@
             <div class="stat-card-content" style="display: flex; justify-content: space-between; align-items: center; gap: 20px;">
                 <div class="stat-info" style="flex: 1;">
                     <h3>প্রকল্প</h3>
-                    <div class="subtitle">হিরো সেকশন, স্লোগান, আমাদের প্রজেক্টসমূহ, অন্যান্য প্রজেক্টসমূহ</div>
+                    <div class="subtitle">হিরো সেকশন, স্লোগান, আমাদের প্রজেক্টসমূহ</div>
                 </div>
                 <div class="stat-icon purple" style="flex-shrink: 0; margin-left: auto; font-size: 2.5rem;">📁</div>
             </div>
@@ -409,14 +409,6 @@
             </script>
         </div>
     </div>
-
-    <!-- Other Projects Section (Placeholder) -->
-    <div id="projects-other" style="margin-top:1rem;">
-        <div class="table-card">
-            <h2>অন্যান্য প্রজেক্টসমূহ</h2>
-            <p style="color:#6b7280;">এখানে অন্যান্য প্রজেক্টসমূহের কন্টেন্ট।</p>
-                        </div>
-                    </div>
 
             <script>
                 (function(){
