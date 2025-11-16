@@ -6,7 +6,7 @@
                     <h3>প্রকল্প</h3>
                     <div class="subtitle">হিরো সেকশন, স্লোগান, আমাদের প্রজেক্টসমূহ</div>
                 </div>
-                <div class="stat-icon purple" style="flex-shrink: 0; margin-left: auto; font-size: 2.5rem;">📁</div>
+                <div class="stat-icon purple" style="flex-shrink: 0; margin-left: auto; font-size: 2.5rem;"><i class="fas fa-folder"></i></div>
             </div>
         </div>
     </div>
@@ -270,7 +270,51 @@
             object-fit: cover;
             border-radius: 8px;
             margin-top: 10px;
-                }
+        }
+        
+        /* Admin Pagination Styles */
+        .admin-pagination-btn {
+            display: inline-block;
+            padding: 10px 18px;
+            margin: 0 5px;
+            background: #7c3aed;
+            color: #ffffff;
+            border: 2px solid #7c3aed;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 15px;
+        }
+
+        .admin-pagination-btn:hover:not(:disabled) {
+            background: #6d28d9;
+            border-color: #6d28d9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+        }
+
+        .admin-pagination-btn.active {
+            background: #6d28d9;
+            border-color: #6d28d9;
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.5);
+        }
+
+        .admin-pagination-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background: #d1d5db;
+            border-color: #d1d5db;
+            color: #6b7280;
+        }
+
+        .admin-pagination-info {
+            display: inline-block;
+            margin: 0 15px;
+            color: #4b5563;
+            font-size: 15px;
+            font-weight: 600;
+        }
             </style>
 
     <!-- Hero Section -->
@@ -281,7 +325,7 @@
             
             <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 12px 16px; margin-bottom: 20px; border-radius: 6px;">
                 <p style="margin: 0; color: #1e40af; font-size: 14px;">
-                    <strong>💡 টিপস:</strong> এই সেকশনের কন্টেন্ট প্রকল্প পেজের প্রথম স্ক্রিনে দেখা যাবে। ব্যাকগ্রাউন্ড ইমেজ আপলোড করলে আরও আকর্ষণীয় দেখাবে।
+                    <strong><i class="fas fa-lightbulb"></i> টিপস:</strong> এই সেকশনের কন্টেন্ট প্রকল্প পেজের প্রথম স্ক্রিনে দেখা যাবে। ব্যাকগ্রাউন্ড ইমেজ আপলোড করলে আরও আকর্ষণীয় দেখাবে।
                 </p>
             </div>
             
@@ -315,7 +359,7 @@
 
             <!-- Dashboard Status -->
             <div class="dashboard-status-box">
-                <h4>📊 ড্যাশবোর্ড স্ট্যাটাস</h4>
+                <h4><i class="fas fa-chart-bar"></i> ড্যাশবোর্ড স্ট্যাটাস</h4>
                 <p id="hero-dashboard-status">হিরো সেকশন: <span id="hero-status-text">কোনো ডেটা নেই</span></p>
                 
                 <div id="hero-content-preview" class="content-preview" style="display:none;">
@@ -327,7 +371,7 @@
                     ✏️ কন্টেন্ট এডিট করুন
                 </button>
                 <button class="clear-content-btn" onclick="clearProjectContent('hero')" id="hero-clear-btn" style="display:none;">
-                    🗑️ সব মুছে ফেলুন
+                    <i class="fas fa-trash-alt"></i> সব মুছে ফেলুন
                 </button>
                         </div>
                         </div>
@@ -353,7 +397,7 @@
                 <label>কোম্পানি লোগো আপলোড করুন</label>
                 <input type="file" id="projects-slogan-logo" accept="image/*" onchange="previewProjectImage('slogan-logo')" />
                 <small style="display: block; margin-top: 5px; color: #6b7280; font-size: 13px;">
-                    🏢 সর্বোচ্চ ফাইল সাইজ: 5MB | সমর্থিত ফরম্যাট: JPG, PNG, SVG, WEBP | প্রস্তাবিত সাইজ: 180x180px
+                    <i class="fas fa-building"></i> সর্বোচ্চ ফাইল সাইজ: 5MB | সমর্থিত ফরম্যাট: JPG, PNG, SVG, WEBP | প্রস্তাবিত সাইজ: 180x180px
                 </small>
                 <div id="projects-slogan-logo-preview" class="image-preview-container"></div>
                         </div>
@@ -364,7 +408,7 @@
 
             <!-- Dashboard Status -->
             <div class="dashboard-status-box">
-                <h4>📊 ড্যাশবোর্ড স্ট্যাটাস</h4>
+                <h4><i class="fas fa-chart-bar"></i> ড্যাশবোর্ড স্ট্যাটাস</h4>
                 <p id="slogan-dashboard-status">স্লোগান সেকশন: <span id="slogan-status-text">কোনো ডেটা নেই</span></p>
                 
                 <div id="slogan-content-preview" class="content-preview" style="display:none;">
@@ -376,7 +420,7 @@
                     ✏️ কন্টেন্ট এডিট করুন
                 </button>
                 <button class="clear-content-btn" onclick="clearProjectContent('slogan')" id="slogan-clear-btn" style="display:none;">
-                    🗑️ সব মুছে ফেলুন
+                    <i class="fas fa-trash-alt"></i> সব মুছে ফেলুন
                 </button>
                         </div>
                             </div>
@@ -391,13 +435,13 @@
                     <p style="color:#6b7280; margin-top: 8px;">প্রজেক্ট যোগ করুন, সম্পাদনা করুন এবং মুছুন</p>
                 </div>
                 <button class="project-save-btn" onclick="addNewProjectCard()" style="background: #10b981;">
-                    ➕ নতুন প্রজেক্ট যোগ করুন
+                    <i class="fas fa-plus"></i> নতুন প্রজেক্ট যোগ করুন
                 </button>
             </div>
 
             <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 12px 16px; margin-bottom: 20px; border-radius: 6px;">
                 <p style="margin: 0; color: #1e40af; font-size: 14px;">
-                    <strong>📌 নির্দেশনা:</strong> প্রতিটি প্রজেক্টের জন্য নাম, বিবরণ, ইমেজ এবং CTA বোতাম তথ্য দিন।
+                    <strong><i class="fas fa-thumbtack"></i> নির্দেশনা:</strong> প্রতিটি প্রজেক্টের জন্য নাম, বিবরণ, ইমেজ এবং CTA বোতাম তথ্য দিন।
                 </p>
             </div>
 
@@ -408,6 +452,11 @@
             <!-- Container for all project cards -->
             <div id="our-projects-container" style="display: grid; gap: 20px;">
                 <!-- Project cards will be dynamically inserted here -->
+            </div>
+
+            <!-- Pagination Container -->
+            <div id="admin-projects-pagination" style="display: none; text-align: center; margin: 30px 0; padding: 20px;">
+                <!-- Pagination buttons will be added here -->
             </div>
         </div>
     </div>
@@ -428,15 +477,15 @@
                 
                 // Set icon and color based on type
                 const types = {
-                    success: { icon: '✓', bg: '#d1fae5', color: '#065f46', title: 'সফল' },
-                    error: { icon: '✗', bg: '#fee2e2', color: '#991b1b', title: 'ত্রুটি' },
-                    warning: { icon: '!', bg: '#fef3c7', color: '#92400e', title: 'সতর্কতা' },
-                    confirm: { icon: '!', bg: '#fee2e2', color: '#b91c1c', title: 'নিশ্চিত করুন' }
+                    success: { icon: '<i class="fas fa-check"></i>', bg: '#d1fae5', color: '#065f46', title: 'সফল' },
+                    error: { icon: '<i class="fas fa-times"></i>', bg: '#fee2e2', color: '#991b1b', title: 'ত্রুটি' },
+                    warning: { icon: '<i class="fas fa-exclamation"></i>', bg: '#fef3c7', color: '#92400e', title: 'সতর্কতা' },
+                    confirm: { icon: '<i class="fas fa-exclamation-triangle"></i>', bg: '#fee2e2', color: '#b91c1c', title: 'নিশ্চিত করুন' }
                 };
                 
                 const style = types[options.type] || types.confirm;
                 
-                icon.textContent = style.icon;
+                icon.innerHTML = style.icon;
                 icon.style.background = style.bg;
                 icon.style.color = style.color;
                 title.textContent = options.title || style.title;
@@ -525,7 +574,7 @@
                 
                 if (statusTextEl) {
                     if (data && (data.title || data.content)) {
-                        statusTextEl.textContent = '✓ সংরক্ষিত';
+                        statusTextEl.innerHTML = '<i class="fas fa-check"></i> সংরক্ষিত';
                         statusTextEl.style.color = '#10b981';
                         statusTextEl.style.fontWeight = '600';
                         
@@ -592,7 +641,7 @@
                 // Show success message
                 const statusEl = document.getElementById(`projects-${section}-status`);
                 if (statusEl) {
-                    statusEl.textContent = '✓ সমস্ত কন্টেন্ট মুছে ফেলা হয়েছে';
+                    statusEl.innerHTML = '<i class="fas fa-check"></i> সমস্ত কন্টেন্ট মুছে ফেলা হয়েছে';
                     statusEl.className = 'project-status success';
                     statusEl.style.display = 'inline-block';
                     setTimeout(() => {
@@ -740,7 +789,7 @@
                     // Show success message
                     const statusEl = document.getElementById(`projects-${section}-status`);
                     if (statusEl) {
-                        statusEl.textContent = '✓ প্রিভিউ আপডেট হয়েছে - প্রকল্প পেজ চেক করুন';
+                        statusEl.innerHTML = '<i class="fas fa-check"></i> প্রিভিউ আপডেট হয়েছে - প্রকল্প পেজ চেক করুন';
                         statusEl.className = 'project-status success';
                         statusEl.style.display = 'inline-block';
                         setTimeout(() => {
@@ -797,7 +846,7 @@
                     
                     if (result.success) {
                         if (statusEl) {
-                            statusEl.textContent = '✓ সফলভাবে সংরক্ষিত হয়েছে';
+                            statusEl.innerHTML = '<i class="fas fa-check"></i> সফলভাবে সংরক্ষিত হয়েছে';
                             statusEl.className = 'project-status success';
                             setTimeout(() => {
                                 statusEl.style.display = 'none';
@@ -820,7 +869,7 @@
                 } catch (error) {
                     console.error('Error saving:', error);
                     if (statusEl) {
-                        statusEl.textContent = '✗ সংরক্ষণ ব্যর্থ হয়েছে';
+                        statusEl.innerHTML = '<i class="fas fa-times"></i> সংরক্ষণ ব্যর্থ হয়েছে';
                         statusEl.className = 'project-status error';
                     }
                 }
@@ -836,6 +885,8 @@
             
             let ourProjects = [];
             let editingProjectId = null;
+            let adminCurrentPage = 1;
+            const adminProjectsPerPage = 5;
 
             // Load all projects
             async function loadOurProjects() {
@@ -844,7 +895,9 @@
                     if (response.ok) {
                         ourProjects = await response.json();
                         console.log('Loaded projects:', ourProjects);
+                        adminCurrentPage = 1; // Reset to first page
                         renderOurProjects();
+                        renderAdminPagination();
                         updateProjectCount();
                     } else {
                         console.error('Failed to load projects:', response.status);
@@ -854,6 +907,13 @@
                 }
             }
 
+            // Get projects for current page
+            function getAdminPaginatedProjects() {
+                const startIndex = (adminCurrentPage - 1) * adminProjectsPerPage;
+                const endIndex = startIndex + adminProjectsPerPage;
+                return ourProjects.slice(startIndex, endIndex);
+            }
+
             // Render all project cards
             function renderOurProjects() {
                 const container = document.getElementById('our-projects-container');
@@ -861,10 +921,74 @@
 
                 container.innerHTML = '';
 
-                ourProjects.forEach((project, index) => {
-                    const card = createProjectCard(project, index);
+                const paginatedProjects = getAdminPaginatedProjects();
+                const startIndex = (adminCurrentPage - 1) * adminProjectsPerPage;
+
+                paginatedProjects.forEach((project, index) => {
+                    const card = createProjectCard(project, startIndex + index);
                     container.appendChild(card);
                 });
+            }
+
+            // Render pagination buttons
+            function renderAdminPagination() {
+                const paginationContainer = document.getElementById('admin-projects-pagination');
+                if (!paginationContainer) return;
+
+                const totalPages = Math.ceil(ourProjects.length / adminProjectsPerPage);
+
+                // Hide pagination if only one page or less
+                if (totalPages <= 1) {
+                    paginationContainer.style.display = 'none';
+                    return;
+                }
+
+                paginationContainer.style.display = 'block';
+                paginationContainer.innerHTML = '';
+
+                // Previous button
+                const prevBtn = document.createElement('button');
+                prevBtn.className = 'admin-pagination-btn';
+                prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i> পূর্ববর্তী';
+                prevBtn.disabled = adminCurrentPage === 1;
+                prevBtn.onclick = () => {
+                    if (adminCurrentPage > 1) {
+                        adminCurrentPage--;
+                        renderOurProjects();
+                        renderAdminPagination();
+                        scrollToProjectsTop();
+                    }
+                };
+                paginationContainer.appendChild(prevBtn);
+
+                // Page numbers
+                const pageInfo = document.createElement('span');
+                pageInfo.className = 'admin-pagination-info';
+                pageInfo.textContent = `পৃষ্ঠা ${adminCurrentPage} / ${totalPages}`;
+                paginationContainer.appendChild(pageInfo);
+
+                // Next button
+                const nextBtn = document.createElement('button');
+                nextBtn.className = 'admin-pagination-btn';
+                nextBtn.innerHTML = 'পরবর্তী <i class="fas fa-chevron-right"></i>';
+                nextBtn.disabled = adminCurrentPage === totalPages;
+                nextBtn.onclick = () => {
+                    if (adminCurrentPage < totalPages) {
+                        adminCurrentPage++;
+                        renderOurProjects();
+                        renderAdminPagination();
+                        scrollToProjectsTop();
+                    }
+                };
+                paginationContainer.appendChild(nextBtn);
+            }
+
+            // Scroll to projects section top
+            function scrollToProjectsTop() {
+                const container = document.getElementById('our-projects-container');
+                if (container) {
+                    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             }
 
             // Create a project card
@@ -877,7 +1001,7 @@
                     <div class="project-card-header">
                         <div class="project-card-title">প্রজেক্ট #${index + 1}</div>
                         <div class="project-card-actions">
-                            ${project.id ? `<button class="project-card-btn delete" onclick="deleteOurProject(${project.id})">🗑️ মুছুন</button>` : ''}
+                            ${project.id ? `<button class="project-card-btn delete" onclick="deleteOurProject(${project.id})"><i class="fas fa-trash-alt"></i> মুছুন</button>` : ''}
         </div>
     </div>
 
@@ -905,25 +1029,25 @@
                         <label>প্রজেক্ট ইমেজ আপলোড করুন</label>
                         ${project.image_url ? `
                             <div style="margin-top: 10px; margin-bottom: 10px; padding: 12px; background: #f0fdf4; border: 2px solid #86efac; border-radius: 8px;">
-                                <small style="color: #166534; font-weight: 600; display: block; margin-bottom: 8px;">✓ বর্তমান ইমেজ সংরক্ষিত আছে</small>
+                                <small style="color: #166534; font-weight: 600; display: block; margin-bottom: 8px;"><i class="fas fa-check"></i> বর্তমান ইমেজ সংরক্ষিত আছে</small>
                                 <small style="color: #059669; font-size: 12px; display: block; margin-bottom: 8px; word-break: break-all;">Path: ${project.image_url}</small>
                                 <img src="${project.image_url}" class="project-card-image-preview" 
                                      style="display: block !important; width: 100%; max-height: 200px; object-fit: cover; border-radius: 8px; border: 2px solid #86efac;" 
                                      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
                                 <div style="display: none; padding: 20px; background: #fee2e2; color: #991b1b; border-radius: 6px; text-align: center;">
-                                    ⚠️ ইমেজ লোড করতে ব্যর্থ - নতুন ইমেজ আপলোড করুন
+                                    <i class="fas fa-exclamation-triangle"></i> ইমেজ লোড করতে ব্যর্থ - নতুন ইমেজ আপলোড করুন
                     </div>
                         </div>
                         ` : ''}
                         <input type="file" class="project-image-input" accept="image/*" onchange="previewProjectCardImage(this)" />
                         <small style="display: block; margin-top: 5px; color: #6b7280; font-size: 13px;">
-                            📸 ${project.image_url ? 'নতুন ইমেজ আপলোড করুন (ঐচ্ছিক) - পুরাতন ইমেজ রাখা হবে' : 'সর্বোচ্চ ফাইল সাইজ: 5MB | প্রস্তাবিত সাইজ: 1500x900px'}
+                            <i class="fas fa-camera"></i> ${project.image_url ? 'নতুন ইমেজ আপলোড করুন (ঐচ্ছিক) - পুরাতন ইমেজ রাখা হবে' : 'সর্বোচ্চ ফাইল সাইজ: 5MB | প্রস্তাবিত সাইজ: 1500x900px'}
                         </small>
                         <div class="project-image-preview-container"></div>
                         </div>
 
                     <button class="project-save-btn" onclick="saveOurProject(this)" style="margin-top: 15px;">
-                        ${project.id ? '💾 আপডেট করুন' : '💾 সংরক্ষণ করুন'}
+                        ${project.id ? '<i class="fas fa-save"></i> আপডেট করুন' : '<i class="fas fa-save"></i> সংরক্ষণ করুন'}
                     </button>
                 `;
 
@@ -1104,7 +1228,7 @@
                         showCancel: false
                     });
                 } finally {
-                    button.textContent = projectId ? '💾 আপডেট করুন' : '💾 সংরক্ষণ করুন';
+                    button.innerHTML = projectId ? '<i class="fas fa-save"></i> আপডেট করুন' : '<i class="fas fa-save"></i> সংরক্ষণ করুন';
                     button.disabled = false;
                 }
             };

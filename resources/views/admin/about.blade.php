@@ -7,7 +7,7 @@
                     <div class="subtitle">এই ট্যাবে হিরো সেকশন, ইতিহাস, মিশন, ভিশন, প্রতিষ্ঠাতা, চেয়ারম্যান ইত্যাদি ম্যানেজ করুন
                     </div>
                 </div>
-                <div class="stat-icon green">ℹ️</div>
+                <div class="stat-icon green"><i class="fas fa-info-circle"></i></div>
             </div>
         </div>
     </div>
@@ -581,7 +581,7 @@
                     
                     if (result.success) {
                         if (statusEl) {
-                            statusEl.textContent = '✓ সফলভাবে সংরক্ষিত হয়েছে';
+                            statusEl.innerHTML = '<i class="fas fa-check"></i> সফলভাবে সংরক্ষিত হয়েছে';
                             statusEl.className = 'about-status success';
                             setTimeout(() => {
                                 statusEl.style.display = 'none';
@@ -598,7 +598,7 @@
                 } catch (error) {
                     console.error('Error saving:', error);
                     if (statusEl) {
-                        statusEl.textContent = '✗ সংরক্ষণ ব্যর্থ হয়েছে';
+                        statusEl.innerHTML = '<i class="fas fa-times"></i> সংরক্ষণ ব্যর্থ হয়েছে';
                         statusEl.className = 'about-status error';
                     }
                 }
@@ -703,9 +703,9 @@
                             ` : ''}
                             <input type="file" class="team-member-image" accept="image/*" onchange="previewTeamMemberImage(this)" />
                             <small style="display:block; margin-top:5px; color:#6b7280; font-size:13px;">
-                                📸 ${member.image_url ? 'নতুন ইমেজ আপলোড করুন (ঐচ্ছিক)' : 'সর্বোচ্চ ফাইল সাইজ: 5MB'}
+                                <i class="fas fa-camera"></i> ${member.image_url ? 'নতুন ইমেজ আপলোড করুন (ঐচ্ছিক)' : 'সর্বোচ্চ ফাইল সাইজ: 5MB'}
                             </small>
-                            <div class="team-member-image-preview"></div>
+                            <div class="team-member-image-preview-container"></div>
                         </div>
                         
                         <button class="about-save-btn" onclick="saveTeamMember(this, '${type}')">

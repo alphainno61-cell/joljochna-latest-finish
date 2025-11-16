@@ -96,7 +96,7 @@
                         <line x1="21" y1="12" x2="9" y2="12"></line>
                     </svg>
                     <span>লগআউট</span>
-                    
+
                 </button>
             </div>
 
@@ -104,7 +104,7 @@
             <div id="logoutConfirmModal" style="display:none; position:fixed; inset:0; z-index:9999; align-items:center; justify-content:center;">
                 <div style="background:#ffffff; width:90%; max-width:420px; border-radius:12px; box-shadow:0 20px 40px rgba(0,0,0,0.25); overflow:hidden;">
                     <div style="padding:18px 20px; border-bottom:1px solid #eef2f7; display:flex; align-items:center; gap:10px;">
-                        <div style="width:36px; height:36px; border-radius:50%; background:#fee2e2; color:#b91c1c; display:flex; align-items:center; justify-content:center; font-weight:700;">!</div>
+                        <div style="width:36px; height:36px; border-radius:50%; background:#fee2e2; color:#b91c1c; display:flex; align-items:center; justify-content:center; font-weight:700;"><i class="fas fa-exclamation"></i></div>
                         <div style="font-size:18px; font-weight:700; color:#0f172a;">লগআউট নিশ্চিতকরণ</div>
                     </div>
                     <div style="padding:18px 20px; color:#334155; font-size:15px; line-height:1.6;">
