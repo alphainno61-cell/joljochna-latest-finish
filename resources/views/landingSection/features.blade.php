@@ -1,179 +1,44 @@
  <section id="features" class="features">
-    <style>
-        @keyframes iconGradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        #featIcon1 {
-            background: linear-gradient(135deg, #ff6b6b, #ffa500, #ffff00, #00ff00, #00ffff, #0000ff, #800080, #ff00ff, #ff1493);
-            background-size: 400% 400%;
-            animation: iconGradient 10s ease infinite;
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: white;
-            font-size: 2rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        #featIcon2 {
-            background: linear-gradient(135deg, #4ecdc4, #44a08d, #96ceb4, #ffeaa7, #dda0dd, #ba55d3, #9370db, #8a2be2, #4b0082);
-            background-size: 400% 400%;
-            animation: iconGradient 10s ease infinite;
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: white;
-            font-size: 2rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        #featIcon3 {
-            background: linear-gradient(135deg, #45b7d1, #96ceb4, #f7dc6f, #f8c471, #e67e22, #d35400, #a0522d, #cd853f, #daa520);
-            background-size: 400% 400%;
-            animation: iconGradient 10s ease infinite;
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: white;
-            font-size: 2rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        #featIcon4 {
-            background: linear-gradient(135deg, #f9ca24, #f093fb, #eb984e, #f4d03f, #58d68d, #3498db, #1e90ff, #00bfff, #87ceeb);
-            background-size: 400% 400%;
-            animation: iconGradient 10s ease infinite;
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: white;
-            font-size: 2rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        #featIcon5 {
-            background: linear-gradient(135deg, #f5576c, #4facfe, #9b59b6, #e74c3c, #27ae60, #f39c12, #e67e22, #8e44ad, #34495e);
-            background-size: 400% 400%;
-            animation: iconGradient 10s ease infinite;
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: white;
-            font-size: 2rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        #featIcon6 {
-            background: linear-gradient(135deg, #00d2d3, #54a0ff, #ff69b4, #ffd700, #32cd32, #ff4500, #dc143c, #ff6347, #ffa07a);
-            background-size: 400% 400%;
-            animation: iconGradient 10s ease infinite;
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: white;
-            font-size: 2rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        #featIcon8 {
-            background: linear-gradient(135deg, #ffa500, #ff6b6b, #ff1493, #00ced1, #daa520, #8a2be2, #9932cc, #ba55d3, #da70d6);
-            background-size: 400% 400%;
-            animation: iconGradient 10s ease infinite;
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: white;
-            font-size: 2rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        #featIcon7 {
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24, #f093fb, #f5576c, #4facfe, #00d2d3, #ff69b4, #ffd700);
-            background-size: 400% 400%;
-            animation: iconGradient 10s ease infinite;
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: white;
-            font-size: 2rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-    </style>
         <h2 class="section-title" id="featuresTitle">আমাদের সুবিধাসমূহ</h2>
         <p class="section-subtitle" id="featuresSubtitle">NEX Real Estate এর একটি প্রকল্প</p>
         <div class="features-grid">
             <div class="feature-card">
-                <div id="featIcon1" class="feature-icon"><i class="fas fa-city"></i></div>
+                <div id="featIcon1" class="feature-icon">🏙️</div>
                 <h3 id="featTitle1">প্রিমিয়াম লোকেশন</h3>
                 <p id="featDesc1">প্রকল্পের ঠিকানা: শুভনূর ৩৮৮ বাড়ি সিদ্ধার্থ এস আবাস, খুলনায় অবস্থিত</p>
             </div>
             <div class="feature-card">
-                <div id="featIcon2" class="feature-icon"><i class="fas fa-clipboard-list"></i></div>
+                <div id="featIcon2" class="feature-icon">📋</div>
                 <h3 id="featTitle2">সহজ কিস্তি সুবিধা</h3>
                 <p id="featDesc2">০৩, ০৫, ১০, ও ২০ কিস্তির সুবিধা সহ নমনীয় পেমেন্ট প্ল্যান</p>
             </div>
             <div class="feature-card">
-                <div id="featIcon3" class="feature-icon"><i class="fas fa-bullseye"></i></div>
+                <div id="featIcon3" class="feature-icon">🎯</div>
                 <h3 id="featTitle3">বিভিন্ন প্লট সাইজ</h3>
                 <p id="featDesc3">২.৫ কাঠা থেকে ৫ কাঠা পর্যন্ত বিভিন্ন সাইজের প্লট উপলব্ধ</p>
             </div>
             <div class="feature-card">
-                <div id="featIcon4" class="feature-icon"><i class="fas fa-gavel"></i></div>
+                <div id="featIcon4" class="feature-icon">⚖️</div>
                 <h3 id="featTitle4">আইনি নিশ্চয়তা</h3>
                 <p id="featDesc4">সম্পূর্ণ আইনি প্রক্রিয়া ও ডকুমেন্টেশন নিশ্চিত</p>
             </div>
             <div class="feature-card">
-                <div id="featIcon5" class="feature-icon"><i class="fas fa-car"></i></div>
+                <div id="featIcon5" class="feature-icon">🚗</div>
                 <h3 id="featTitle5">সহজ যোগাযোগ</h3>
                 <p id="featDesc5">প্রধান সড়কের সাথে সরাসরি সংযোগ ও উন্নত যোগাযোগ ব্যবস্থা</p>
             </div>
             <div class="feature-card">
-                <div id="featIcon6" class="feature-icon"><i class="fas fa-tree"></i></div>
+                <div id="featIcon6" class="feature-icon">🌳</div>
                 <h3 id="featTitle6">সবুজ পরিবেশ</h3>
                 <p id="featDesc6">পরিকল্পিত সবুজায়ন এবং আধুনিক সুবিধা সম্বলিত</p>
             </div>
             <div class="feature-card">
-                <div id="featIcon7" class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                <div id="featIcon7" class="feature-icon">🛡️</div>
                 <h3 id="featTitle7">২৪/৭ নিরাপত্তা</h3>
                 <p id="featDesc7">সিসিটিভি নজরদারি ও পেশাদার নিরাপত্তা টিম দ্বারা সুরক্ষিত</p>
             </div>
             <div class="feature-card">
-                <div id="featIcon8" class="feature-icon"><i class="fas fa-tint"></i></div>
+                <div id="featIcon8" class="feature-icon">💧</div>
                 <h3 id="featTitle8">পানি ও বিদ্যুৎ সংযোগ</h3>
                 <p id="featDesc8">নিরবচ্ছিন্ন পানি ও বিদ্যুতের সুবিধা নিশ্চিত</p>
             </div>
