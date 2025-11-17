@@ -2,12 +2,12 @@
     <style>
         #overview {
             margin-top: 20px;
-            padding: 0;
         }
         
         .overview-container {
             max-width: 100%;
             margin: 0 auto;
+            padding: 20px 0 0 0;
         }
         
         .stats-grid {
