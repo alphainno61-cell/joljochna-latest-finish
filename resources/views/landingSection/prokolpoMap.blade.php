@@ -1374,7 +1374,7 @@
         }
 
         if (el.footerNote) el.footerNote.innerHTML = s.footerNote;
-        if (el.ctaBar) el.ctaBar.textContent = s.ctaBar;
+        if (el.ctaBar) el.ctaBar.innerHTML = s.ctaBar;
         if (el.mapImage && s.mapImage) el.mapImage.src = s.mapImage;
 
         // Disable dynamic roadmap rendering

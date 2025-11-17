@@ -827,9 +827,14 @@ function saveFooterSettings() {
             'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || ''
         }
     })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
-            if (data.success || response.ok) {
+            if (data.success) {
                 alertUser('সফল', 'ফুটার সেটিংস সংরক্ষণ করা হয়েছে।');
                 // Reload settings in admin
                 loadFooterSettings();
@@ -840,7 +845,7 @@ function saveFooterSettings() {
                 // Also dispatch event for cross-tab communication
                 window.dispatchEvent(new CustomEvent('footerSettingsUpdated'));
             } else {
-                alertUser('ত্রুটি', 'সেটিংস সংরক্ষণ করতে ব্যর্থ হয়েছে।');
+                alertUser('ত্রুটি', data.message || 'সেটিংস সংরক্ষণ করতে ব্যর্থ হয়েছে।');
             }
         })
         .catch(error => {
@@ -1141,36 +1146,12 @@ function applyProfileLogo() {
 window.onload = function () {
     updateCurrentDate();
 
-    // Restore saved tab and section, or default to overview
-    try {
-        const savedTab = localStorage.getItem('adminActiveTab');
-        const savedSection = localStorage.getItem('adminActiveSection');
-
-        if (savedTab && savedSection) {
-            // Open the submenu if needed
-            if (savedTab === 'home') {
-                const homeSubmenu = document.getElementById('homeSubmenu');
-                if (homeSubmenu) homeSubmenu.classList.add('open');
-            } else if (savedTab === 'about') {
-                const aboutSubmenu = document.getElementById('aboutSubmenu');
-                if (aboutSubmenu) aboutSubmenu.classList.add('open');
-            } else if (savedTab === 'projects') {
-                const projectsSubmenu = document.getElementById('projectsSubmenu');
-                if (projectsSubmenu) projectsSubmenu.classList.add('open');
-            }
-            // Navigate to saved tab and section without animation
-            navigateTo(savedTab, savedSection, true);
-        } else if (savedTab) {
-            // Just show the saved tab
-            showTab(savedTab);
-        } else {
-            // Default to overview tab
-            showTab('overview');
-        }
-    } catch (e) {
-        // Fallback to overview if localStorage fails
-        showTab('overview');
-    }
+    // Always default to overview tab on page load/reload
+    showTab('overview');
+    
+    // Clear any saved tab state to ensure overview is always shown
+    localStorage.removeItem('adminActiveTab');
+    localStorage.removeItem('adminActiveSection');
 
     // Populate header settings form if present
     loadHeaderSettings();

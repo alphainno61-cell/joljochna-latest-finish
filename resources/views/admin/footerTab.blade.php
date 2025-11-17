@@ -21,7 +21,7 @@
     <div class="table-card">
         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
             <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #0a4d2e 0%, #1a7a4a 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">
-                📄
+                <i class="fas fa-file-alt"></i>
             </div>
             <div>
                 <h2 style="margin: 0; color: #111827; font-size: 24px; font-weight: 700;">ফুটার সেটিংস</h2>
@@ -33,7 +33,7 @@
             <!-- Basic Information Section -->
             <div style="background: #f9fafb; border-radius: 12px; padding: 20px; margin-bottom: 24px; border: 1px solid #e5e7eb;">
                 <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #e5e7eb;">
-                    <span style="font-size: 18px;">ℹ️</span>
+                    <span style="font-size: 18px;"><i class="fas fa-info-circle"></i></span>
                     <h3 style="margin: 0; color: #111827; font-size: 18px; font-weight: 600;">মৌলিক তথ্য</h3>
                 </div>
                 <div class="form-grid">
@@ -57,7 +57,7 @@
             <!-- Contact Information Section -->
             <div style="background: #f9fafb; border-radius: 12px; padding: 20px; margin-bottom: 24px; border: 1px solid #e5e7eb;">
                 <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #e5e7eb;">
-                    <span style="font-size: 18px;">📞</span>
+                    <span style="font-size: 18px;"><i class="fas fa-phone"></i></span>
                     <h3 style="margin: 0; color: #111827; font-size: 18px; font-weight: 600;">যোগাযোগের তথ্য</h3>
                 </div>
                 <div class="form-grid">
@@ -88,7 +88,7 @@
             <!-- Address Section -->
             <div style="background: #f9fafb; border-radius: 12px; padding: 20px; margin-bottom: 24px; border: 1px solid #e5e7eb;">
                 <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #e5e7eb;">
-                    <span style="font-size: 18px;">📍</span>
+                    <span style="font-size: 18px;"><i class="fas fa-map-marker-alt"></i></span>
                     <h3 style="margin: 0; color: #111827; font-size: 18px; font-weight: 600;">ঠিকানা</h3>
                 </div>
                 <div class="form-grid">
@@ -112,7 +112,7 @@
             <!-- Quick Links Section -->
             <div style="background: #f9fafb; border-radius: 12px; padding: 20px; margin-bottom: 24px; border: 1px solid #e5e7eb;">
                 <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #e5e7eb;">
-                    <span style="font-size: 18px;">🔗</span>
+                    <span style="font-size: 18px;"><i class="fas fa-link"></i></span>
                     <h3 style="margin: 0; color: #111827; font-size: 18px; font-weight: 600;">দ্রুত লিংক</h3>
                 </div>
                 <div class="form-grid">
@@ -162,7 +162,7 @@
             <!-- Legal Links Section -->
             <div style="background: #f9fafb; border-radius: 12px; padding: 20px; margin-bottom: 24px; border: 1px solid #e5e7eb;">
                 <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #e5e7eb;">
-                    <span style="font-size: 18px;">⚖️</span>
+                    <span style="font-size: 18px;"><i class="fas fa-balance-scale"></i></span>
                     <h3 style="margin: 0; color: #111827; font-size: 18px; font-weight: 600;">আইনি তথ্য</h3>
                 </div>
                 <div class="form-grid">
@@ -188,7 +188,7 @@
             <!-- Social Media Links Section -->
             <div style="background: #f9fafb; border-radius: 12px; padding: 20px; margin-bottom: 24px; border: 1px solid #e5e7eb;">
                 <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #e5e7eb;">
-                    <span style="font-size: 18px;">🌐</span>
+                    <span style="font-size: 18px;"><i class="fas fa-globe"></i></span>
                     <h3 style="margin: 0; color: #111827; font-size: 18px; font-weight: 600;">সোশ্যাল মিডিয়া লিংক</h3>
                 </div>
                 <div class="form-grid">
@@ -233,7 +233,7 @@
             <!-- Map & QR Section -->
             <div style="background: #f9fafb; border-radius: 12px; padding: 20px; margin-bottom: 24px; border: 1px solid #e5e7eb;">
                 <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #e5e7eb;">
-                    <span style="font-size: 18px;">🗺️</span>
+                    <span style="font-size: 18px;"><i class="fas fa-map"></i></span>
                     <h3 style="margin: 0; color: #111827; font-size: 18px; font-weight: 600;">ম্যাপ ও QR কোড</h3>
                 </div>
                 <div class="form-grid">
@@ -271,7 +271,7 @@
             <!-- Footer Bottom Text -->
             <div style="background: #f9fafb; border-radius: 12px; padding: 20px; margin-bottom: 24px; border: 1px solid #e5e7eb;">
                 <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #e5e7eb;">
-                    <span style="font-size: 18px;">📝</span>
+                    <span style="font-size: 18px;"><i class="fas fa-edit"></i></span>
                     <h3 style="margin: 0; color: #111827; font-size: 18px; font-weight: 600;">ফুটার বটম টেক্সট</h3>
                 </div>
                 <div class="form-grid">
@@ -288,11 +288,11 @@
             <!-- Form Actions -->
             <div style="display: flex; gap: 12px; padding-top: 20px; border-top: 2px solid #e5e7eb; margin-top: 24px;">
                 <button type="button" class="btn-save" onclick="saveFooterSettings()" style="flex: 1; padding: 12px 24px; background: linear-gradient(135deg, #0a4d2e 0%, #1a7a4a 100%); color: white; border: none; border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 8px;">
-                    <span>💾</span>
+                    <span><i class="fas fa-save"></i></span>
                     <span>সংরক্ষণ করুন</span>
                 </button>
                 <button type="button" class="btn-reset" onclick="resetFooterSettings()" style="padding: 12px 24px; background: #6b7280; color: white; border: none; border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer; transition: all 0.3s;">
-                    🔄 ডিফল্টে ফিরুন
+                    <i class="fas fa-undo"></i> ডিফল্টে ফিরুন
                 </button>
             </div>
         </form>
@@ -304,13 +304,13 @@
             <div style="display:flex; gap:32px; padding:16px;">
                 <div style="flex:1; min-width:220px;">
                     <div style="display:flex; align-items:center; gap:8px; color:#fbbf24;">
-                        <span>🏠</span>
+                        <span><i class="fas fa-home"></i></span>
                         <h3 id="pvTitle" style="margin:0; color:#e5e7eb;">জলজোছনা</h3>
                     </div>
                     <p id="pvDesc" style="margin:8px 0 12px 0; color:#cbd5e1;">NEX Real Estate এর একটি প্রকল্প। আপনার স্বপ্নের বাড়ি নির্মাণের জন্য প্রিমিয়াম লোকেশনে সবুজ পরিবেশে গড়ে উঠেছে জলজোছনা।</p>
                     <div style="display:flex; flex-direction:column; gap:8px;">
-                        <div><strong>📞</strong> <span id="pvPhone1">+880 1991 995 995</span>, <span id="pvPhone2">+880 1991 994 994</span></div>
-                        <div><strong>✉️</strong> <span id="pvEmail">hello.nexup@gmail.com</span></div>
+                        <div><strong><i class="fas fa-phone"></i></strong> <span id="pvPhone1">+880 1991 995 995</span>, <span id="pvPhone2">+880 1991 994 994</span></div>
+                        <div><strong><i class="fas fa-envelope"></i></strong> <span id="pvEmail">hello.nexup@gmail.com</span></div>
                     </div>
                     <div style="display:flex; gap:8px; margin-top:8px;">
                         <a id="pvFb" href="#" style="color:#cbd5e1;">Facebook</a>
