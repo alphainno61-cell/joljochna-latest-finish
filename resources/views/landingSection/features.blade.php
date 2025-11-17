@@ -7,7 +7,7 @@
         }
 
         #featIcon1 {
-            background: linear-gradient(135deg, #ff6b6b, #ffa500, #ffff00, #00ff00, #00ffff, #0000ff);
+            background: linear-gradient(135deg, #ff6b6b, #ffa500, #ffff00, #00ff00, #00ffff, #0000ff, #800080, #ff00ff, #ff1493);
             background-size: 400% 400%;
             animation: iconGradient 10s ease infinite;
             border-radius: 50%;
@@ -23,7 +23,7 @@
         }
 
         #featIcon2 {
-            background: linear-gradient(135deg, #4ecdc4, #44a08d, #96ceb4, #ffeaa7, #dda0dd, #ba55d3);
+            background: linear-gradient(135deg, #4ecdc4, #44a08d, #96ceb4, #ffeaa7, #dda0dd, #ba55d3, #9370db, #8a2be2, #4b0082);
             background-size: 400% 400%;
             animation: iconGradient 10s ease infinite;
             border-radius: 50%;
@@ -39,7 +39,7 @@
         }
 
         #featIcon3 {
-            background: linear-gradient(135deg, #45b7d1, #96ceb4, #f7dc6f, #f8c471, #e67e22, #d35400);
+            background: linear-gradient(135deg, #45b7d1, #96ceb4, #f7dc6f, #f8c471, #e67e22, #d35400, #a0522d, #cd853f, #daa520);
             background-size: 400% 400%;
             animation: iconGradient 10s ease infinite;
             border-radius: 50%;
@@ -55,7 +55,7 @@
         }
 
         #featIcon4 {
-            background: linear-gradient(135deg, #f9ca24, #f093fb, #eb984e, #f4d03f, #58d68d, #3498db);
+            background: linear-gradient(135deg, #f9ca24, #f093fb, #eb984e, #f4d03f, #58d68d, #3498db, #1e90ff, #00bfff, #87ceeb);
             background-size: 400% 400%;
             animation: iconGradient 10s ease infinite;
             border-radius: 50%;
@@ -71,7 +71,7 @@
         }
 
         #featIcon5 {
-            background: linear-gradient(135deg, #f5576c, #4facfe, #9b59b6, #e74c3c, #27ae60, #f39c12);
+            background: linear-gradient(135deg, #f5576c, #4facfe, #9b59b6, #e74c3c, #27ae60, #f39c12, #e67e22, #8e44ad, #34495e);
             background-size: 400% 400%;
             animation: iconGradient 10s ease infinite;
             border-radius: 50%;
@@ -87,7 +87,7 @@
         }
 
         #featIcon6 {
-            background: linear-gradient(135deg, #00d2d3, #54a0ff, #ff69b4, #ffd700, #32cd32, #ff4500);
+            background: linear-gradient(135deg, #00d2d3, #54a0ff, #ff69b4, #ffd700, #32cd32, #ff4500, #dc143c, #ff6347, #ffa07a);
             background-size: 400% 400%;
             animation: iconGradient 10s ease infinite;
             border-radius: 50%;
@@ -103,7 +103,7 @@
         }
 
         #featIcon8 {
-            background: linear-gradient(135deg, #ffa500, #ff6b6b, #ff1493, #00ced1, #daa520, #8a2be2);
+            background: linear-gradient(135deg, #ffa500, #ff6b6b, #ff1493, #00ced1, #daa520, #8a2be2, #9932cc, #ba55d3, #da70d6);
             background-size: 400% 400%;
             animation: iconGradient 10s ease infinite;
             border-radius: 50%;
@@ -119,7 +119,7 @@
         }
 
         #featIcon7 {
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24, #f093fb, #f5576c, #4facfe, #00d2d3);
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24, #f093fb, #f5576c, #4facfe, #00d2d3, #ff69b4, #ffd700);
             background-size: 400% 400%;
             animation: iconGradient 10s ease infinite;
             border-radius: 50%;
