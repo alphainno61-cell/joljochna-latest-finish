@@ -23,7 +23,7 @@
                         </svg>
                         JSON এক্সপোর্ট
                     </button>
-                    <div class="stat-icon purple" style="flex-shrink: 0; font-size: 2.5rem;"><i class="fas fa-clipboard-list"></i></div>", "oldString": "                    <div class="stat-icon purple" style="flex-shrink: 0; font-size: 2.5rem;">📋</div>
+                    <div class="stat-icon purple" style="flex-shrink: 0; font-size: 2.5rem;"><i class="fas fa-clipboard-list"></i></div>
                 </div>
             </div>
         </div>
